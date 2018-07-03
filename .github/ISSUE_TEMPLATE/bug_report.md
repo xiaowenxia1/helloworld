@@ -9,7 +9,7 @@ about: Create a report to help us improve
 
 **environment**
 1. branch(version): 
-2. Desktop OS(windows linux or macOS X):
+2. Desktop OS(windows linux or macOS):
 3. example: 
 
 **Expected behavior**
