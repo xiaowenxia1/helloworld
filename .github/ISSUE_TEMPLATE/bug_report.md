@@ -4,18 +4,24 @@ about: Create a report to help us improve
 
 ---
 
-**Describe the bug**
+**Description**
 
 
-**environment**
-1. branch(version): 
-2. Desktop OS(windows linux or macOS):
-3. example: 
+**Environment**
+1. Commit ID:
+2. Host OS:
+3. Board:
 
-**Expected behavior**
-
-
-**Screenshots**
+**Reproduce Steps**
 
 
-**Additional context**
+**Expected Behavior**
+
+
+**Actual Behavior**
+
+
+**Logs or Screenshots**
+
+
+**Additional Information**
