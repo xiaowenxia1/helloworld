@@ -1,0 +1,171 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>版本发布 · AliOS-Things</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="### [1.3.1](https://github.com/alibaba/AliOS-Things/releases/tag/v1.3.1)"/><meta name="docsearch:language" content="en"/><meta property="og:title" content="版本发布 · AliOS-Things"/><meta property="og:type" content="website"/><meta property="og:url" content="https://your-docusaurus-test-site.com/index.html"/><meta property="og:description" content="### [1.3.1](https://github.com/alibaba/AliOS-Things/releases/tag/v1.3.1)"/><meta property="og:image" content="https://your-docusaurus-test-site.com/img/docusaurus.png"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://your-docusaurus-test-site.com/img/docusaurus.png"/><link rel="shortcut icon" href="/img/favicon/favicon.ico"/><link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/solarized-dark.min.css"/><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><link rel="stylesheet" href="/css/main.css"/></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/"><h2 class="headerTitle">AliOS-Things</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class="siteNavGroupActive"><a href="/docs/quickstart" target="_self">Docs</a></li><li class="siteNavGroupActive"><a href="/docs/quickstart" target="_self">FAQ</a></li><li class=""><a href="/docs/contributors" target="_self">Contributors</a></li><li class=""><a href="/help" target="_self">Help</a></li><li class=""><a href="https://github.com/alibaba/AliOS-Things" target="_self">GitHub</a></li><li class="navSearchWrapper reactNavSearchWrapper"><input type="text" id="search_input_react" placeholder="Search" title="Search"/></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="container docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><i></i></div><h2><i>›</i><span>资源</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle">入门</h3><ul><li class="navListItem"><a class="navItem" href="/docs/quickstart">快速开始</a></li><li class="navListItem"><a class="navItem" href="/docs/helloworld">第一个C应用</a></li><li class="navListItem"><a class="navItem" href="/docs/boneengine_firstjs">第一个JS应用</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">文档</h3><ul><li class="navListItem"><a class="navItem" href="/docs/technical-overview">技术架构总览</a></li><li class="navListItem"><a class="navItem" href="/docs/hardware">硬件支持</a></li><li class="navListItem"><a class="navItem" href="/docs/modules">认证模组</a></li><li class="navListItem"><a class="navItem" href="/docs/boards">开发板</a></li><li class="navListItem"><a class="navItem" href="/docs/starterkit">AliOS Things Starter Kit</a></li><li class="navListItem"><a class="navItem" href="/docs/boneengine-lite-tech">BoneEngine@Lite</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">API Reference</h3><ul><li class="navListItem"><a class="navItem" href="/docs/api-reference/AliOS-Things-API-Guide">Overview</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">应用</h3><ul><li class="navListItem"><a class="navItem" href="/docs/scenario">应用场景</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">资源</h3><ul><li class="navListItem navListItemActive"><a class="navItem" href="/docs/release">版本发布</a></li><li class="navListItem"><a class="navItem" href="/docs/certification">AliOS Things 认证</a></li><li class="navListItem"><a class="navItem" href="/docs/community">社区</a></li><li class="navListItem"><a class="navItem" href="/docs/articles">技术文章</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">活动</h3><ul><li class="navListItem"><a class="navItem" href="/docs/activity-iot-contest">activity-iot-contest</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">关于</h3><ul><li class="navListItem"><a class="navItem" href="/docs/contact">联系我们</a></li></ul></div></div></section></div><script>
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              const headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                if (event.target.tagName === 'A') {
+                  document.body.classList.remove('tocActive');
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                if (!toggler) {
+                  return;
+                }
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer docMainContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1 class="postHeaderTitle">版本发布</h1></header><article><div><span><h3><a class="anchor" aria-hidden="true" id="131-https-githubcom-alibaba-alios-things-releases-tag-v131"></a><a href="#131-https-githubcom-alibaba-alios-things-releases-tag-v131" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><a href="https://github.com/alibaba/AliOS-Things/releases/tag/v1.3.1">1.3.1</a></h3>
+<p><a href="https://codeload.github.com/alibaba/AliOS-Things/zip/v1.3.1">ZIP Package</a> MD5: 9dac76d6715c7a24567798f91a7e0c41</p>
+<p>Highlights:</p>
+<ul>
+<li>Link Kit update</li>
+<li>Link WAN update</li>
+</ul>
+<h3><a class="anchor" aria-hidden="true" id="130-https-githubcom-alibaba-alios-things-releases-tag-v130"></a><a href="#130-https-githubcom-alibaba-alios-things-releases-tag-v130" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><a href="https://github.com/alibaba/AliOS-Things/releases/tag/v1.3.0">1.3.0</a></h3>
+<p><a href="https://codeload.github.com/alibaba/AliOS-Things/zip/v1.3.0">ZIP Package</a> MD5: 376e7541fdc66161a0a9da274bdd4b84</p>
+<p>Highlights:</p>
+<ul>
+<li>Link Kit v2.1.1 with ALCS/COTA/RRPC supported</li>
+<li>CMSIS-RTOS for better ARM Architecture support</li>
+<li>STM32Cube for easily porting new STM32 boards</li>
+</ul>
+<p>Other major enhancements included in v1.3.0:</p>
+<ul>
+<li>Overall: STM32Cube</li>
+<li>Kernel: CMSIS-RTOS Support, Tickless, spiffs/uffs</li>
+<li>MCU:  RTL8710bn(WiFi SoC), Xtensa(8266), nRF52840(BLE 5.0 SoC)</li>
+<li>Networking: GPRS@SAL, Link WAN(enhanced LoRaWAN)</li>
+<li>Infrastructure: Keil/IAR Project Autogen, Python(scons) Build System</li>
+<li>Middleware: Link Kit, GPS Framework, GUI(littlevGL)</li>
+</ul>
+<h3><a class="anchor" aria-hidden="true" id="122-https-githubcom-alibaba-alios-things-releases-tag-v122"></a><a href="#122-https-githubcom-alibaba-alios-things-releases-tag-v122" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><a href="https://github.com/alibaba/AliOS-Things/releases/tag/v1.2.2">1.2.2</a></h3>
+<p><a href="https://github.com/alibaba/AliOS-Things/archive/v1.2.2.zip">ZIP Package</a> MD5: 45bc6c0c362b99015c09c7e881fc7cc9</p>
+<ul>
+<li><a href="https://github.com/alibaba/AliOS-Things/archive/v1.2.2.zip">source code (zip) </a></li>
+<li><a href="https://github.com/alibaba/AliOS-Things/archive/v1.2.2.tar.gz">source code (tar.gz)</a></li>
+</ul>
+<p>Special version for <a href="starterkit">AliOS Things Starter Kit</a> support.</p>
+<h3><a class="anchor" aria-hidden="true" id="121-https-githubcom-alibaba-alios-things-releases-tag-v121"></a><a href="#121-https-githubcom-alibaba-alios-things-releases-tag-v121" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><a href="https://github.com/alibaba/AliOS-Things/releases/tag/v1.2.1">1.2.1</a></h3>
+<p><a href="https://github.com/alibaba/AliOS-Things/archive/v1.2.1.zip">ZIP Package</a> MD5: 675d79f44b8ef931bbdd9b8655a64837</p>
+<ul>
+<li><a href="https://github.com/alibaba/AliOS-Things/archive/v1.2.1.zip">源代码 (zip) </a></li>
+<li><a href="https://github.com/alibaba/AliOS-Things/archive/v1.2.1.tar.gz">源代码 (tar.gz)</a></li>
+</ul>
+<p>亮点:</p>
+<ul>
+<li>SIG BLE Mesh</li>
+<li>Link Voice</li>
+</ul>
+<p>v1.2.1 其他要点:</p>
+<ul>
+<li>MCU：支持 Cortex-M7, KL27，RL78, RX600</li>
+<li>内核: 支持 yaffs2</li>
+<li>协议栈: BLE 5.0</li>
+<li>驱动: ST 6轴MEMS传感器 LSM6DSL, 气压传感器 LPS22HB</li>
+<li>基础设施: 支持 Keil／IAR makefile</li>
+</ul>
+<h3><a class="anchor" aria-hidden="true" id="120-https-githubcom-alibaba-alios-things-releases-tag-v120"></a><a href="#120-https-githubcom-alibaba-alios-things-releases-tag-v120" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><a href="https://github.com/alibaba/AliOS-Things/releases/tag/v1.2.0">1.2.0</a></h3>
+<p><a href="https://github.com/alibaba/AliOS-Things/archive/v1.2.0.zip">ZIP Package</a> MD5: 36eefa823d9fea7927e9c2ea4b1c5503</p>
+<ul>
+<li><a href="https://github.com/alibaba/AliOS-Things/archive/v1.2.0.zip">源代码 (zip) </a></li>
+<li><a href="https://github.com/alibaba/AliOS-Things/archive/v1.2.0.tar.gz">源代码 (tar.gz)</a></li>
+</ul>
+<p>亮点:</p>
+<ul>
+<li>AOS API</li>
+<li>基于 NXP LPC54102 支持 GT202 WiFi 模组 (高通 QCA4002)</li>
+<li>uData 框架和传感器驱动器</li>
+<li>uMesh 扩展认证协议 (ID²)</li>
+<li>第一版 BLE 应用框架</li>
+<li>在 ESP32 和 Nordic NF51822 上支持 BLE 协议栈 4.2 Preview</li>
+</ul>
+<p>v1.2.0 版本还主要增加了以下功能和支持 :</p>
+<ul>
+<li>MCU: LPC54102</li>
+<li>开发板: LPC54102 Express, MK3239(BLE), MK1101</li>
+<li>内核: CPU深度睡眠模式后的tick补偿，固定的缓冲器队列</li>
+<li>协议栈: uMesh EAP(ID²), BLE 应用程序框架, BLE 协议栈 4.2</li>
+<li>中间件: uData 框架, Bosch 传感器驱动器</li>
+</ul>
+<h3><a class="anchor" aria-hidden="true" id="112-https-githubcom-alibaba-alios-things-releases-tag-v112"></a><a href="#112-https-githubcom-alibaba-alios-things-releases-tag-v112" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><a href="https://github.com/alibaba/AliOS-Things/releases/tag/v1.1.2">1.1.2</a></h3>
+<p><a href="https://github.com/alibaba/AliOS-Things/archive/v1.1.2.zip">ZIP Package</a> MD5: db334b0ee30c0273622ee72450c15916</p>
+<ul>
+<li><a href="https://github.com/alibaba/AliOS-Things/archive/v1.1.2.zip">源代码 (zip)</a></li>
+<li><a href="https://github.com/alibaba/AliOS-Things/archive/v1.1.2.tar.gz">源代码 (tar.gz)</a></li>
+</ul>
+<p>亮点:</p>
+<ul>
+<li>支持Keil/IAR</li>
+<li>AliOS Things 测试套件</li>
+<li>支持LoRaWAN</li>
+<li>CK802T 可信运行环境(TEE)</li>
+</ul>
+<p>v1.1.2版本还主要增加了以下功能和支持 :</p>
+<ul>
+<li>MCU: stm32l0xx, stm32l4xx, csky(ck802/ck802t)</li>
+<li>开发板: STM32L073RZ-Nucleo, STM32L496GDiscovery, eml3047(LoRa), mk3166(WiFi), Hobbit(TEE)</li>
+<li>内核: 优化定时器，优化任务删除</li>
+<li>安全: CK802 可信运行环境(TEE)</li>
+<li>协议栈: LoRaWAN, SAL(AT)</li>
+<li>中间件: FOTA CoAP</li>
+<li>设备: mk3060 SAL</li>
+</ul>
+<h3><a class="anchor" aria-hidden="true" id="111-https-githubcom-alibaba-alios-things-releases-tag-aos111"></a><a href="#111-https-githubcom-alibaba-alios-things-releases-tag-aos111" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><a href="https://github.com/alibaba/AliOS-Things/releases/tag/aos1.1.1">1.1.1</a></h3>
+<p><a href="https://github.com/alibaba/AliOS-Things/archive/aos1.1.1.zip">ZIP Package</a> MD5: c447a6ec1a3af951b0b058830c90e316</p>
+<ul>
+<li><a href="https://github.com/alibaba/AliOS-Things/archive/aos1.1.1.zip">源代码 (zip)</a></li>
+<li><a href="https://github.com/alibaba/AliOS-Things/archive/aos1.1.1.tar.gz">源代码 (tar.gz)</a></li>
+</ul>
+<p>v1.1.1版本主要增加了以下功能和支持 :</p>
+<ul>
+<li>支持的新平台: ESP32 (WiFi，WiFi Mesh &amp; BLE)</li>
+<li>AT 框架: 包括AT Parser, AT HAL</li>
+<li>IP模式的SAL: 基于AT的 socket APIs</li>
+<li>3 BINS: 内核，框架，应用程序</li>
+<li>JavaScript 引擎</li>
+<li>测试环境基础组件,和 AliOS Studio 集成开发环境一起提供多设备的开发和调平台</li>
+</ul>
+<h3><a class="anchor" aria-hidden="true" id="110-https-githubcom-alibaba-alios-things-releases-tag-aos110"></a><a href="#110-https-githubcom-alibaba-alios-things-releases-tag-aos110" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><a href="https://github.com/alibaba/AliOS-Things/releases/tag/aos1.1.0">1.1.0</a></h3>
+<p><a href="https://github.com/alibaba/AliOS-Things/archive/aos1.1.0.zip">ZIP Package</a> MD5: c69d2fb18efc76df77c28c7fbec90f7b</p>
+<ul>
+<li><a href="https://github.com/alibaba/AliOS-Things/archive/aos1.1.0.zip">源代码 (zip)</a></li>
+<li><a href="https://github.com/alibaba/AliOS-Things/archive/aos1.1.0.tar.gz">源代码 (tar.gz)</a></li>
+</ul>
+<p>第一次在Github发布。</p>
+<p>AliOS Things的主要组件包括:</p>
+<ul>
+<li><p>VFS: 对于嵌入式系统的简单的虚拟文件系统</p></li>
+<li><p>KV: 针对闪存设备的密钥存储系统</p></li>
+<li><p>yloop: 简单但功能强大的框架来减少多线程的复杂性</p></li>
+<li><p>LWIP: 经过良好测试的TCP / IP协议栈，支持IPv4和IPv6</p></li>
+<li><p>uMesh: 内部开发的Mesh网络栈，可支持802.11，802.15.4，和BLE</p></li>
+<li><p>安全组件: 包括安全传输层协议 （TLS）、可信框架服务（TFS）、可信执行环境（TEE）</p></li>
+<li><p>FOTA：端到端的提供FOTA解决方案</p></li>
+<li><p>物联网协议：包括SDS；支持MQTT和CoAP</p></li>
+</ul>
+<p>参考链接:</p>
+<ul>
+<li>AliOS Things 官方网站: <a href="https://iot.aliyun.com/product/alios">https://iot.aliyun.com/product/alios</a></li>
+<li>SDS: <a href="https://iot.aliyun.com/product/open">https://iot.aliyun.com/product/open</a></li>
+<li>IoT 套件: <a href="https://iot.aliyun.com/product/netsuite">https://iot.aliyun.com/product/netsuite</a></li>
+</ul>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/scenario"><span class="arrow-prev">← </span><span>Previous</span></a><a class="docs-next button" href="/docs/certification"><span>Next</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav docOnPageNav"></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/docs/Getting-Started" style="margin:20px"><img src="/img/logo.png" alt="AliOS-Things" width="100"/></a><div><h5>Docs</h5><a href="/docs/en/Getting-Started.html">Getting Started</a><a href="/docs/en/Linkkit-Tutorial.html">Guides</a><a href="/docs/en/api-reference/AliOS-Things-API-Guide.html">API Reference</a></div><div><h5>Community</h5><a href="/en/users.html">dingding</a><a href="http://stackoverflow.com/questions/tagged/" target="_blank" rel="noreferrer noopener">WebChart</a><a href="https://discordapp.com/">Project Chat</a><a href="https://twitter.com/" target="_blank" rel="noreferrer noopener">Yunqi</a></div><div><h5>More</h5><a href="/blog">Blog</a><a href="https://github.com/">GitHub</a><a class="github-button" data-icon="octicon-star" data-count-href="/facebook/docusaurus/stargazers" data-show-count="true" data-count-aria-label="# stargazers on GitHub" aria-label="Star this project on GitHub">Star</a></div></section><section class="copyright">Copyright © 2018 AliOS-Things</section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
+              var search = docsearch({
+                
+                apiKey: 'my-api-key',
+                indexName: 'my-index-name',
+                inputSelector: '#search_input_react',
+                algoliaOptions: {}
+              });
+            </script></body></html>

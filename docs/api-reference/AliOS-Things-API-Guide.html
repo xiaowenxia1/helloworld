@@ -1,0 +1,70 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Overview · AliOS-Things</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="[Home](Home) &gt; [API Reference](AliOS-Things-API-Guide)"/><meta name="docsearch:language" content="en"/><meta property="og:title" content="Overview · AliOS-Things"/><meta property="og:type" content="website"/><meta property="og:url" content="https://your-docusaurus-test-site.com/index.html"/><meta property="og:description" content="[Home](Home) &gt; [API Reference](AliOS-Things-API-Guide)"/><meta property="og:image" content="https://your-docusaurus-test-site.com/img/docusaurus.png"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://your-docusaurus-test-site.com/img/docusaurus.png"/><link rel="shortcut icon" href="/img/favicon/favicon.ico"/><link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/solarized-dark.min.css"/><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><link rel="stylesheet" href="/css/main.css"/></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/"><h2 class="headerTitle">AliOS-Things</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class="siteNavGroupActive"><a href="/docs/quickstart" target="_self">Docs</a></li><li class="siteNavGroupActive"><a href="/docs/quickstart" target="_self">FAQ</a></li><li class=""><a href="/docs/contributors" target="_self">Contributors</a></li><li class=""><a href="/help" target="_self">Help</a></li><li class=""><a href="https://github.com/alibaba/AliOS-Things" target="_self">GitHub</a></li><li class="navSearchWrapper reactNavSearchWrapper"><input type="text" id="search_input_react" placeholder="Search" title="Search"/></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="container docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><i></i></div><h2><i>›</i><span>API Reference</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle">入门</h3><ul><li class="navListItem"><a class="navItem" href="/docs/quickstart">快速开始</a></li><li class="navListItem"><a class="navItem" href="/docs/helloworld">第一个C应用</a></li><li class="navListItem"><a class="navItem" href="/docs/boneengine_firstjs">第一个JS应用</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">文档</h3><ul><li class="navListItem"><a class="navItem" href="/docs/technical-overview">技术架构总览</a></li><li class="navListItem"><a class="navItem" href="/docs/hardware">硬件支持</a></li><li class="navListItem"><a class="navItem" href="/docs/modules">认证模组</a></li><li class="navListItem"><a class="navItem" href="/docs/boards">开发板</a></li><li class="navListItem"><a class="navItem" href="/docs/starterkit">AliOS Things Starter Kit</a></li><li class="navListItem"><a class="navItem" href="/docs/boneengine-lite-tech">BoneEngine@Lite</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">API Reference</h3><ul><li class="navListItem navListItemActive"><a class="navItem" href="/docs/api-reference/AliOS-Things-API-Guide">Overview</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">应用</h3><ul><li class="navListItem"><a class="navItem" href="/docs/scenario">应用场景</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">资源</h3><ul><li class="navListItem"><a class="navItem" href="/docs/release">版本发布</a></li><li class="navListItem"><a class="navItem" href="/docs/certification">AliOS Things 认证</a></li><li class="navListItem"><a class="navItem" href="/docs/community">社区</a></li><li class="navListItem"><a class="navItem" href="/docs/articles">技术文章</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">活动</h3><ul><li class="navListItem"><a class="navItem" href="/docs/activity-iot-contest">activity-iot-contest</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">关于</h3><ul><li class="navListItem"><a class="navItem" href="/docs/contact">联系我们</a></li></ul></div></div></section></div><script>
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              const headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                if (event.target.tagName === 'A') {
+                  document.body.classList.remove('tocActive');
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                if (!toggler) {
+                  return;
+                }
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer docMainContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1 class="postHeaderTitle">Overview</h1></header><article><div><span><p><a href="Home">Home</a> &gt; <a href="AliOS-Things-API-Guide">API Reference</a></p>
+<ul>
+<li><a href="AliOS-Things-API-ALINK-Guide">ALINK</a></li>
+<li><a href="AliOS-Things-API-CLI-Guide">CLI</a></li>
+<li><a href="AliOS-Things-API-CLOUD-Guide">CLOUD</a></li>
+<li><a href="AliOS-Things-API-HAL-Guide">HAL</a>
+<ul>
+<li><a href="AliOS-Things-API-HAL-OTA-Guide">OTA</a></li>
+<li><a href="AliOS-Things-API-HAL-TRACE-Guide">TRACE</a></li>
+<li><a href="AliOS-Things-API-HAL-WiFi-Guide">WiFi</a></li>
+</ul></li>
+<li>SoC
+<ul>
+<li><a href="AliOS-Things-API-HAL-SOC-ADC-Guide">ADC</a></li>
+<li><a href="AliOS-Things-API-HAL-SOC-FLASH-Guide">FLASH</a></li>
+<li><a href="AliOS-Things-API-HAL-SOC-GPIO-Guide">GPIO</a></li>
+<li><a href="AliOS-Things-API-HAL-SOC-I2C-Guide">I2C</a></li>
+<li><a href="AliOS-Things-API-HAL-SOC-PWM-Guide">PWM</a></li>
+<li><a href="AliOS-Things-API-HAL-SOC-RNG-Guide">RNG</a></li>
+<li><a href="AliOS-Things-API-HAL-SOC-RTC-Guide">RTC</a></li>
+<li><a href="AliOS-Things-API-HAL-SOC-SD-Guide">SD</a></li>
+<li><a href="AliOS-Things-API-HAL-SOC-SPI-Guide">SPI</a></li>
+<li><a href="AliOS-Things-API-HAL-SOC-TIMER-Guide">TIMER</a></li>
+<li><a href="AliOS-Things-API-HAL-SOC-UART-Guide">UART</a></li>
+<li><a href="AliOS-Things-API-HAL-SOC-WDG-Guide">WDG</a></li>
+</ul></li>
+<li><a href="AliOS-Things-API-KERNEL-Guide">KERNEL</a></li>
+<li><a href="AliOS-Things-API-KV-Guide">KV</a></li>
+<li><a href="AliOS-Things-API-LOG-Guide">LOG</a></li>
+<li><a href="AliOS-Things-API-SSL-Guide">SSL</a></li>
+<li><a href="AliOS-Things-API-VERSION-Guide">VERSION</a></li>
+<li><a href="AliOS-Things-API-VFS-Guide">VFS</a></li>
+<li><a href="AliOS-Things-API-YLOOP-Guide">YLOOP</a></li>
+</ul>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/boneengine-lite-tech"><span class="arrow-prev">← </span><span>Previous</span></a><a class="docs-next button" href="/docs/scenario"><span>Next</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav docOnPageNav"></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/docs/Getting-Started" style="margin:20px"><img src="/img/logo.png" alt="AliOS-Things" width="100"/></a><div><h5>Docs</h5><a href="/docs/en/Getting-Started.html">Getting Started</a><a href="/docs/en/Linkkit-Tutorial.html">Guides</a><a href="/docs/en/api-reference/AliOS-Things-API-Guide.html">API Reference</a></div><div><h5>Community</h5><a href="/en/users.html">dingding</a><a href="http://stackoverflow.com/questions/tagged/" target="_blank" rel="noreferrer noopener">WebChart</a><a href="https://discordapp.com/">Project Chat</a><a href="https://twitter.com/" target="_blank" rel="noreferrer noopener">Yunqi</a></div><div><h5>More</h5><a href="/blog">Blog</a><a href="https://github.com/">GitHub</a><a class="github-button" data-icon="octicon-star" data-count-href="/facebook/docusaurus/stargazers" data-show-count="true" data-count-aria-label="# stargazers on GitHub" aria-label="Star this project on GitHub">Star</a></div></section><section class="copyright">Copyright © 2018 AliOS-Things</section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
+              var search = docsearch({
+                
+                apiKey: 'my-api-key',
+                indexName: 'my-index-name',
+                inputSelector: '#search_input_react',
+                algoliaOptions: {}
+              });
+            </script></body></html>

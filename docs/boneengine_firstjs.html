@@ -1,0 +1,103 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>第一个JS应用 · AliOS-Things</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="本文展示了基于AliOS-Things + BoneEngine@Lite实现一个通过GPIO控制LED闪灯的例子。"/><meta name="docsearch:language" content="en"/><meta property="og:title" content="第一个JS应用 · AliOS-Things"/><meta property="og:type" content="website"/><meta property="og:url" content="https://your-docusaurus-test-site.com/index.html"/><meta property="og:description" content="本文展示了基于AliOS-Things + BoneEngine@Lite实现一个通过GPIO控制LED闪灯的例子。"/><meta property="og:image" content="https://your-docusaurus-test-site.com/img/docusaurus.png"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://your-docusaurus-test-site.com/img/docusaurus.png"/><link rel="shortcut icon" href="/img/favicon/favicon.ico"/><link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/solarized-dark.min.css"/><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><link rel="stylesheet" href="/css/main.css"/></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/"><h2 class="headerTitle">AliOS-Things</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class="siteNavGroupActive"><a href="/docs/quickstart" target="_self">Docs</a></li><li class="siteNavGroupActive"><a href="/docs/quickstart" target="_self">FAQ</a></li><li class=""><a href="/docs/contributors" target="_self">Contributors</a></li><li class=""><a href="/help" target="_self">Help</a></li><li class=""><a href="https://github.com/alibaba/AliOS-Things" target="_self">GitHub</a></li><li class="navSearchWrapper reactNavSearchWrapper"><input type="text" id="search_input_react" placeholder="Search" title="Search"/></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="container docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><i></i></div><h2><i>›</i><span>入门</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle">入门</h3><ul><li class="navListItem"><a class="navItem" href="/docs/quickstart">快速开始</a></li><li class="navListItem"><a class="navItem" href="/docs/helloworld">第一个C应用</a></li><li class="navListItem navListItemActive"><a class="navItem" href="/docs/boneengine_firstjs">第一个JS应用</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">文档</h3><ul><li class="navListItem"><a class="navItem" href="/docs/technical-overview">技术架构总览</a></li><li class="navListItem"><a class="navItem" href="/docs/hardware">硬件支持</a></li><li class="navListItem"><a class="navItem" href="/docs/modules">认证模组</a></li><li class="navListItem"><a class="navItem" href="/docs/boards">开发板</a></li><li class="navListItem"><a class="navItem" href="/docs/starterkit">AliOS Things Starter Kit</a></li><li class="navListItem"><a class="navItem" href="/docs/boneengine-lite-tech">BoneEngine@Lite</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">API Reference</h3><ul><li class="navListItem"><a class="navItem" href="/docs/api-reference/AliOS-Things-API-Guide">Overview</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">应用</h3><ul><li class="navListItem"><a class="navItem" href="/docs/scenario">应用场景</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">资源</h3><ul><li class="navListItem"><a class="navItem" href="/docs/release">版本发布</a></li><li class="navListItem"><a class="navItem" href="/docs/certification">AliOS Things 认证</a></li><li class="navListItem"><a class="navItem" href="/docs/community">社区</a></li><li class="navListItem"><a class="navItem" href="/docs/articles">技术文章</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">活动</h3><ul><li class="navListItem"><a class="navItem" href="/docs/activity-iot-contest">activity-iot-contest</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">关于</h3><ul><li class="navListItem"><a class="navItem" href="/docs/contact">联系我们</a></li></ul></div></div></section></div><script>
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              const headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                if (event.target.tagName === 'A') {
+                  document.body.classList.remove('tocActive');
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                if (!toggler) {
+                  return;
+                }
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer docMainContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1 class="postHeaderTitle">第一个JS应用</h1></header><article><div><span><p>本文展示了基于AliOS-Things + BoneEngine@Lite实现一个通过GPIO控制LED闪灯的例子。</p>
+<h2><a class="anchor" aria-hidden="true" id="1-准备工作"></a><a href="#1-准备工作" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>1 准备工作</h2>
+<ul>
+<li>下载AliOS-Things的代码。</li>
+<li>一款支持BoneEngine@Lite的硬件/模组。如developerkit，mk3060，esp32devkitc。</li>
+</ul>
+<h3><a class="anchor" aria-hidden="true" id="11-编译并烧录boneengine-lite固件"></a><a href="#11-编译并烧录boneengine-lite固件" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>1.1 编译并烧录BoneEngine@Lite固件</h3>
+<ul>
+<li><p>说明：这里以硬件AliOS-Things developerkit开发板为例。</p></li>
+<li><p>编译：进入AliOS-Things的根目录，执行<code>aos make tinyengine_app@developerkit</code></p></li>
+<li><p>烧录： 编译成功后，通过usb连接developerkit开发板和PC，执行<code>aos upload tinyengine_app@developerkit</code></p></li>
+</ul>
+<h3><a class="anchor" aria-hidden="true" id="12-安装be-cli工具"></a><a href="#12-安装be-cli工具" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>1.2  安装be cli工具</h3>
+<p>be_cli工具是BoneEngine@Lite用于调试js代码的工具。</p>
+<ul>
+<li><p>MAC/Ubuntu系统：</p>
+<p>进入aos/framework/tinyengine/tools目录，执行<code>make cli</code>命令。</p></li>
+<li><p>Windows系统：</p>
+<p>参考文档 <a href="zh-cn/be-cli-for-windows-install.md">如何在windows下准备be-cli应用开发环境.md</a></p></li>
+</ul>
+<h2><a class="anchor" aria-hidden="true" id="2-基于boneengine-lite实现控制led的js代码"></a><a href="#2-基于boneengine-lite实现控制led的js代码" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>2 基于BoneEngine@Lite实现控制LED的js代码</h2>
+<h3><a class="anchor" aria-hidden="true" id="21-初始化一个boneengine-lite工程"></a><a href="#21-初始化一个boneengine-lite工程" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>2.1 初始化一个BoneEngine@Lite工程</h3>
+<p>在PC主机的任意目录执行<code>be -i bone</code>,其中bone名字可以任意取，仅代表工程目录名。</p>
+<h3><a class="anchor" aria-hidden="true" id="22-配置board-configjson-硬件配置文件"></a><a href="#22-配置board-configjson-硬件配置文件" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>2.2 配置board_config.json 硬件配置文件</h3>
+<p>根据硬件版型配置需要控制的gpio口和定义对象ID（led）。例如developerkit板子的gpio 67连接了一个led，因此这里port 为67。</p>
+<pre><code class="hljs css language-javascript"><span class="hljs-string">"GPIO"</span>:[
+        {
+            <span class="hljs-string">"id"</span>:<span class="hljs-string">"led"</span>,
+            <span class="hljs-string">"port"</span>:<span class="hljs-number">67</span>,
+            <span class="hljs-string">"dir"</span>:<span class="hljs-number">0</span>,
+            <span class="hljs-string">"pull"</span>:<span class="hljs-number">1</span>
+        },
+    ],
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="23-编辑indexjs文件编写js代码"></a><a href="#23-编辑indexjs文件编写js代码" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>2.3 编辑index.js文件编写js代码</h3>
+<p>打开bone目录下的index.js文件并实现LED闪烁的js代码，默认情况下，BoneEngine启动后会自动加载index.js文件并运行。</p>
+<p>代码如下：</p>
+<pre><code class="hljs css language-javascript"><span class="hljs-built_in">console</span>.log(<span class="hljs-string">'This a demo javascript for bone-engine\n'</span>);
+<span class="hljs-built_in">console</span>.log(<span class="hljs-string">'this demo run on developerkit to blink led every second'</span>);
+
+<span class="hljs-keyword">var</span> index = <span class="hljs-number">0</span>;
+<span class="hljs-keyword">var</span> led_handle = GPIO.open(<span class="hljs-string">'led'</span>);
+GPIO.write(led_handle,<span class="hljs-number">0</span>);
+setInterval(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+    index = <span class="hljs-number">1</span>-index;
+    GPIO.write(led_handle,index);
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'led blink every seconds...............'</span>);
+}, <span class="hljs-number">1000</span>);
+<span class="hljs-built_in">console</span>.log(<span class="hljs-string">'end gpio test........................'</span>);
+</code></pre>
+<h2><a class="anchor" aria-hidden="true" id="3-推送js文件到硬件-模组上运行"></a><a href="#3-推送js文件到硬件-模组上运行" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>3 推送js文件到硬件/模组上运行</h2>
+<h3><a class="anchor" aria-hidden="true" id="31使用be-cli打包工程目录"></a><a href="#31使用be-cli打包工程目录" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>3.1使用be_cli打包工程目录</h3>
+<p>在工程目录的同级目录执行命令 <code>be -p bone</code></p>
+<p>执行成功会生成一个app.bin文件。</p>
+<h3><a class="anchor" aria-hidden="true" id="32-使用be-cli推送appbin文件到硬件-模组"></a><a href="#32-使用be-cli推送appbin文件到硬件-模组" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>3.2 使用be_cli推送app.bin文件到硬件/模组</h3>
+<p>通过usb连接硬件/模组到pc ，</p>
+<ul>
+<li><p>执行命令选择usb端口： <code>be connect</code></p>
+<pre><code class="hljs"> <span class="hljs-keyword">be</span> connect
+------[<span class="hljs-number">0</span>] uar<span class="hljs-variable">t:</span> /dev/tty.usbmodem14113
+<span class="hljs-built_in">input</span> <span class="hljs-keyword">number</span> <span class="hljs-keyword">to</span> select device <span class="hljs-keyword">to</span> connec<span class="hljs-variable">t:0</span>
+device <span class="hljs-built_in">has</span> been connected!
+</code></pre></li>
+<li><p>执行命令：<code>be push app.bin</code></p></li>
+</ul>
+<h3><a class="anchor" aria-hidden="true" id="33-重启硬件-模组查看js运行效果"></a><a href="#33-重启硬件-模组查看js运行效果" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>3.3 重启硬件/模组查看js运行效果</h3>
+<p>可以看到developerkit的LED2每隔一秒闪烁。</p>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/helloworld"><span class="arrow-prev">← </span><span>Previous</span></a><a class="docs-next button" href="/docs/technical-overview"><span>Next</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav docOnPageNav"><ul class="toc-headings"><li><a href="#1-准备工作">1 准备工作</a><ul class="toc-headings"><li><a href="#11-编译并烧录boneengine-lite固件">1.1 编译并烧录BoneEngine@Lite固件</a></li><li><a href="#12-安装be-cli工具">1.2 安装be cli工具</a></li></ul></li><li><a href="#2-基于boneengine-lite实现控制led的js代码">2 基于BoneEngine@Lite实现控制LED的js代码</a><ul class="toc-headings"><li><a href="#21-初始化一个boneengine-lite工程">2.1 初始化一个BoneEngine@Lite工程</a></li><li><a href="#22-配置board-configjson-硬件配置文件">2.2 配置board_config.json 硬件配置文件</a></li><li><a href="#23-编辑indexjs文件编写js代码">2.3 编辑index.js文件编写js代码</a></li></ul></li><li><a href="#3-推送js文件到硬件-模组上运行">3 推送js文件到硬件/模组上运行</a><ul class="toc-headings"><li><a href="#31使用be-cli打包工程目录">3.1使用be_cli打包工程目录</a></li><li><a href="#32-使用be-cli推送appbin文件到硬件-模组">3.2 使用be_cli推送app.bin文件到硬件/模组</a></li><li><a href="#33-重启硬件-模组查看js运行效果">3.3 重启硬件/模组查看js运行效果</a></li></ul></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/docs/Getting-Started" style="margin:20px"><img src="/img/logo.png" alt="AliOS-Things" width="100"/></a><div><h5>Docs</h5><a href="/docs/en/Getting-Started.html">Getting Started</a><a href="/docs/en/Linkkit-Tutorial.html">Guides</a><a href="/docs/en/api-reference/AliOS-Things-API-Guide.html">API Reference</a></div><div><h5>Community</h5><a href="/en/users.html">dingding</a><a href="http://stackoverflow.com/questions/tagged/" target="_blank" rel="noreferrer noopener">WebChart</a><a href="https://discordapp.com/">Project Chat</a><a href="https://twitter.com/" target="_blank" rel="noreferrer noopener">Yunqi</a></div><div><h5>More</h5><a href="/blog">Blog</a><a href="https://github.com/">GitHub</a><a class="github-button" data-icon="octicon-star" data-count-href="/facebook/docusaurus/stargazers" data-show-count="true" data-count-aria-label="# stargazers on GitHub" aria-label="Star this project on GitHub">Star</a></div></section><section class="copyright">Copyright © 2018 AliOS-Things</section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
+              var search = docsearch({
+                
+                apiKey: 'my-api-key',
+                indexName: 'my-index-name',
+                inputSelector: '#search_input_react',
+                algoliaOptions: {}
+              });
+            </script></body></html>
