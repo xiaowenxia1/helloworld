@@ -1,0 +1,126 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>api-reference/AliOS-Things-API-HAL-OTA-Guide · AliOS-Things</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="# API INDEX"/><meta name="docsearch:language" content="en"/><meta property="og:title" content="api-reference/AliOS-Things-API-HAL-OTA-Guide · AliOS-Things"/><meta property="og:type" content="website"/><meta property="og:url" content="https://your-docusaurus-test-site.com/index.html"/><meta property="og:description" content="# API INDEX"/><meta property="og:image" content="https://your-docusaurus-test-site.com/img/docusaurus.png"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://your-docusaurus-test-site.com/img/docusaurus.png"/><link rel="shortcut icon" href="/img/favicon/favicon.ico"/><link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/solarized-dark.min.css"/><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><link rel="stylesheet" href="/css/main.css"/></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/"><h2 class="headerTitle">AliOS-Things</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class=""><a href="/docs/quickstart" target="_self">Docs</a></li><li class=""><a href="/docs/quickstart" target="_self">FAQ</a></li><li class=""><a href="/docs/contributors" target="_self">Contributors</a></li><li class=""><a href="/help" target="_self">Help</a></li><li class=""><a href="https://github.com/alibaba/AliOS-Things" target="_self">GitHub</a></li><li class="navSearchWrapper reactNavSearchWrapper"><input type="text" id="search_input_react" placeholder="Search" title="Search"/></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="container mainContainer docMainContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1 class="postHeaderTitle">api-reference/AliOS-Things-API-HAL-OTA-Guide</h1></header><article><div><span><h1><a class="anchor" aria-hidden="true" id="api-index"></a><a href="#api-index" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>API INDEX</h1>
+<ul>
+<li><a href="#1-hal_ota_register_module">1 hal_ota_register_module</a></li>
+<li><a href="#2-hal_ota_init">2 hal_ota_init</a></li>
+<li><a href="#3-hal_ota_write">3 hal_ota_write</a></li>
+<li><a href="#4-hal_ota_read">4 hal_ota_read</a></li>
+<li><a href="#5-hal_ota_set_boot">5 hal_ota_set_boot</a></li>
+<li><a href="#6-hal_ota_get_default_module">6 hal_ota_get_default_module</a></li>
+</ul>
+<hr>
+<h2><a class="anchor" aria-hidden="true" id="1-hal-ota-register-module"></a><a href="#1-hal-ota-register-module" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>1-hal_ota_register_module</h2>
+<pre><code class="hljs css language-c"><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">hal_ota_register_module</span><span class="hljs-params">(<span class="hljs-keyword">hal_ota_module_t</span> *<span class="hljs-keyword">module</span>)</span>
+</span></code></pre>
+<ul>
+<li><p>[x] <strong>Description</strong></p>
+<p>Arch register a new module before HAL startup</p></li>
+<li><p>[x] <strong>Parameters</strong></p>
+<p>None.</p></li>
+<li><p>[x] <strong>Returns</strong></p>
+<p>None.</p></li>
+</ul>
+<h2><a class="anchor" aria-hidden="true" id="2-hal-ota-init"></a><a href="#2-hal-ota-init" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>2-hal_ota_init</h2>
+<pre><code class="hljs css language-c"><span class="hljs-keyword">hal_stat_t</span> hal_ota_init(<span class="hljs-keyword">void</span> *something)
+</code></pre>
+<ul>
+<li><p>[x] <strong>Description</strong></p>
+<p>init ota partition</p></li>
+<li><p>[x] <strong>Parameters</strong></p>
+<table>
+<thead>
+<tr><th>IN/OUT</th><th>NAME</th><th>DESC</th></tr>
+</thead>
+<tbody>
+<tr><td></td><td>something</td><td>extra info for ota init</td></tr>
+</tbody>
+</table>
+</li>
+<li><p>[x] <strong>Returns</strong></p>
+<p>0 : On success, 1 : If an error occurred with any step</p></li>
+</ul>
+<h2><a class="anchor" aria-hidden="true" id="3-hal-ota-write"></a><a href="#3-hal-ota-write" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>3-hal_ota_write</h2>
+<pre><code class="hljs css language-c"><span class="hljs-keyword">hal_stat_t</span> hal_ota_write(<span class="hljs-keyword">hal_ota_module_t</span> *m, <span class="hljs-keyword">volatile</span> <span class="hljs-keyword">uint32_t</span> *off_set,
+                         <span class="hljs-keyword">uint8_t</span> *in_buf , <span class="hljs-keyword">uint32_t</span> in_buf_len)
+</code></pre>
+<ul>
+<li><p>[x] <strong>Description</strong></p>
+<p>Write data to an area on ota partition</p></li>
+<li><p>[x] <strong>Parameters</strong></p>
+<table>
+<thead>
+<tr><th>IN/OUT</th><th>NAME</th><th>DESC</th></tr>
+</thead>
+<tbody>
+<tr><td></td><td>mRefer the ota module which will be used,default module will be used if value is NULL</td><td></td></tr>
+<tr><td></td><td>off_set</td><td>Point to the start address that the data is written to, andpoint to the last unwritten address after this function isreturned, so you can call this function serval times withoutupdate this start address.</td></tr>
+<tr><td></td><td>inbuf</td><td>point to the data buffer that will be written to flash</td></tr>
+<tr><td></td><td>in_buf_len</td><td>The length of the buffe</td></tr>
+</tbody>
+</table>
+</li>
+<li><p>[x] <strong>Returns</strong></p>
+<p>0 : On success, 1 : If an error occurred with any step</p></li>
+</ul>
+<h2><a class="anchor" aria-hidden="true" id="4-hal-ota-read"></a><a href="#4-hal-ota-read" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>4-hal_ota_read</h2>
+<pre><code class="hljs css language-c"><span class="hljs-keyword">hal_stat_t</span> hal_ota_read(<span class="hljs-keyword">hal_ota_module_t</span> *m, <span class="hljs-keyword">volatile</span> <span class="hljs-keyword">uint32_t</span> *off_set,
+                        <span class="hljs-keyword">uint8_t</span> *out_buf, <span class="hljs-keyword">uint32_t</span> out_buf_len)
+</code></pre>
+<ul>
+<li><p>[x] <strong>Description</strong></p>
+<p>Read data from an area on ota Flash to data buffer in RAM</p></li>
+<li><p>[x] <strong>Parameters</strong></p>
+<table>
+<thead>
+<tr><th>IN/OUT</th><th>NAME</th><th>DESC</th></tr>
+</thead>
+<tbody>
+<tr><td></td><td>m Refer the ota module which will be used,default module will be used if value is NULL</td><td></td></tr>
+<tr><td></td><td>off_set</td><td>Point to the start address that the data is read, and point to the last unread address after this function is returned, so you can call this function serval times without update this start address.</td></tr>
+<tr><td></td><td>out_buf</td><td>Point to the data buffer that stores the data read from flash</td></tr>
+<tr><td></td><td>out_buf_len</td><td>The length of the buffe</td></tr>
+</tbody>
+</table>
+</li>
+<li><p>[x] <strong>Returns</strong></p>
+<p>0 : On success, 1 : If an error occurred with any step</p></li>
+</ul>
+<h2><a class="anchor" aria-hidden="true" id="5-hal-ota-set-boot"></a><a href="#5-hal-ota-set-boot" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>5-hal_ota_set_boot</h2>
+<pre><code class="hljs css language-c"><span class="hljs-keyword">hal_stat_t</span> hal_ota_set_boot(<span class="hljs-keyword">hal_ota_module_t</span> *m, <span class="hljs-keyword">void</span> *something)
+</code></pre>
+<ul>
+<li><p>[x] <strong>Description</strong></p>
+<p>Set boot options when ota reboot</p></li>
+<li><p>[x] <strong>Parameters</strong></p>
+<table>
+<thead>
+<tr><th>IN/OUT</th><th>NAME</th><th>DESC</th></tr>
+</thead>
+<tbody>
+<tr><td></td><td>m</td><td>Refer the ota module which will be used,default module will be used if value is NULL</td></tr>
+<tr><td></td><td>something</td><td>boot parms</td></tr>
+</tbody>
+</table>
+</li>
+<li><p>[x] <strong>Returns</strong></p>
+<p>kNoErr : On success. kGeneralErr : If an error occurred with any step</p></li>
+</ul>
+<h2><a class="anchor" aria-hidden="true" id="6-hal-ota-get-default-module"></a><a href="#6-hal-ota-get-default-module" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>6-hal_ota_get_default_module</h2>
+<pre><code class="hljs css language-c"><span class="hljs-keyword">hal_ota_module_t</span> *hal_ota_get_default_module(<span class="hljs-keyword">void</span>)
+</code></pre>
+<ul>
+<li><p>[x] <strong>Description</strong></p>
+<p>Get the default ota module</p></li>
+<li><p>[x] <strong>Parameters</strong></p>
+<p>None.</p></li>
+<li><p>[x] <strong>Returns</strong></p>
+<p>the first registered ota module ,which is the head of module list</p></li>
+</ul>
+</span></div></article></div><div class="docs-prevnext"></div></div></div><nav class="onPageNav docOnPageNav"><ul class="toc-headings"><li><a href="#1-hal-ota-register-module">1-hal_ota_register_module</a></li><li><a href="#2-hal-ota-init">2-hal_ota_init</a></li><li><a href="#3-hal-ota-write">3-hal_ota_write</a></li><li><a href="#4-hal-ota-read">4-hal_ota_read</a></li><li><a href="#5-hal-ota-set-boot">5-hal_ota_set_boot</a></li><li><a href="#6-hal-ota-get-default-module">6-hal_ota_get_default_module</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/docs/Getting-Started" style="margin:20px"><img src="/img/logo.png" alt="AliOS-Things" width="100"/></a><div><h5>Docs</h5><a href="/docs/en/Getting-Started.html">Getting Started</a><a href="/docs/en/Linkkit-Tutorial.html">Guides</a><a href="/docs/en/api-reference/AliOS-Things-API-Guide.html">API Reference</a></div><div><h5>Community</h5><a href="/en/users.html">dingding</a><a href="http://stackoverflow.com/questions/tagged/" target="_blank" rel="noreferrer noopener">WebChart</a><a href="https://discordapp.com/">Project Chat</a><a href="https://twitter.com/" target="_blank" rel="noreferrer noopener">Yunqi</a></div><div><h5>More</h5><a href="/blog">Blog</a><a href="https://github.com/">GitHub</a><a class="github-button" data-icon="octicon-star" data-count-href="/facebook/docusaurus/stargazers" data-show-count="true" data-count-aria-label="# stargazers on GitHub" aria-label="Star this project on GitHub">Star</a></div></section><section class="copyright">Copyright © 2018 AliOS-Things</section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
+              var search = docsearch({
+                
+                apiKey: 'my-api-key',
+                indexName: 'my-index-name',
+                inputSelector: '#search_input_react',
+                algoliaOptions: {}
+              });
+            </script></body></html>

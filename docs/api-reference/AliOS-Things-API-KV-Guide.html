@@ -1,0 +1,78 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>api-reference/AliOS-Things-API-KV-Guide · AliOS-Things</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="# API INDEX"/><meta name="docsearch:language" content="en"/><meta property="og:title" content="api-reference/AliOS-Things-API-KV-Guide · AliOS-Things"/><meta property="og:type" content="website"/><meta property="og:url" content="https://your-docusaurus-test-site.com/index.html"/><meta property="og:description" content="# API INDEX"/><meta property="og:image" content="https://your-docusaurus-test-site.com/img/docusaurus.png"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://your-docusaurus-test-site.com/img/docusaurus.png"/><link rel="shortcut icon" href="/img/favicon/favicon.ico"/><link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/solarized-dark.min.css"/><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><link rel="stylesheet" href="/css/main.css"/></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/"><h2 class="headerTitle">AliOS-Things</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class=""><a href="/docs/quickstart" target="_self">Docs</a></li><li class=""><a href="/docs/quickstart" target="_self">FAQ</a></li><li class=""><a href="/docs/contributors" target="_self">Contributors</a></li><li class=""><a href="/help" target="_self">Help</a></li><li class=""><a href="https://github.com/alibaba/AliOS-Things" target="_self">GitHub</a></li><li class="navSearchWrapper reactNavSearchWrapper"><input type="text" id="search_input_react" placeholder="Search" title="Search"/></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="container mainContainer docMainContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1 class="postHeaderTitle">api-reference/AliOS-Things-API-KV-Guide</h1></header><article><div><span><h1><a class="anchor" aria-hidden="true" id="api-index"></a><a href="#api-index" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>API INDEX</h1>
+<ul>
+<li><a href="#1-aos_kv_set">1 aos_kv_set</a></li>
+<li><a href="#2-aos_kv_get">2 aos_kv_get</a></li>
+<li><a href="#3-aos_kv_del">3 aos_kv_del</a></li>
+</ul>
+<hr>
+<h2><a class="anchor" aria-hidden="true" id="1-aos-kv-set"></a><a href="#1-aos-kv-set" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>1-aos_kv_set</h2>
+<pre><code class="hljs css language-c"><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">aos_kv_set</span><span class="hljs-params">(<span class="hljs-keyword">const</span> <span class="hljs-keyword">char</span> *key, <span class="hljs-keyword">const</span> <span class="hljs-keyword">void</span> *value, <span class="hljs-keyword">int</span> len, <span class="hljs-keyword">int</span> sync)</span>
+</span></code></pre>
+<ul>
+<li><p>[x] <strong>Description</strong></p>
+<p>Add a new KV pair.</p></li>
+<li><p>[x] <strong>Parameters</strong></p>
+<table>
+<thead>
+<tr><th>IN/OUT</th><th>NAME</th><th>DESC</th></tr>
+</thead>
+<tbody>
+<tr><td>[in]</td><td>key</td><td>the key of the KV pair.</td></tr>
+<tr><td>[in]</td><td>value</td><td>the value of the KV pair.</td></tr>
+<tr><td>[in]</td><td>len</td><td>the length of the value.</td></tr>
+<tr><td>[in]</td><td>sync</td><td>save the KV pair to flash right now (should always be 1).</td></tr>
+</tbody>
+</table>
+</li>
+<li><p>[x] <strong>Returns</strong></p>
+<p>0 on success, negative error on failure.</p></li>
+</ul>
+<h2><a class="anchor" aria-hidden="true" id="2-aos-kv-get"></a><a href="#2-aos-kv-get" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>2-aos_kv_get</h2>
+<pre><code class="hljs css language-c"><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">aos_kv_get</span><span class="hljs-params">(<span class="hljs-keyword">const</span> <span class="hljs-keyword">char</span> *key, <span class="hljs-keyword">void</span> *buffer, <span class="hljs-keyword">int</span> *buffer_len)</span>
+</span></code></pre>
+<ul>
+<li><p>[x] <strong>Description</strong></p>
+<p>Get the KV pair's value stored in buffer by its key.</p></li>
+<li><p>[x] <strong>Parameters</strong></p>
+<table>
+<thead>
+<tr><th>IN/OUT</th><th>NAME</th><th>DESC</th></tr>
+</thead>
+<tbody>
+<tr><td>[in]</td><td>key</td><td>the key of the KV pair to get.</td></tr>
+<tr><td>[out]</td><td>buffer</td><td>the memory to store the value.</td></tr>
+<tr><td>[in-out]</td><td>buffer_len</td><td>in: the length of the input buffer.        out: the real length of the value.</td></tr>
+</tbody>
+</table>
+</li>
+<li><p>[x] <strong>Returns</strong></p>
+<p>0 on success, negative error on failure.</p></li>
+</ul>
+<h2><a class="anchor" aria-hidden="true" id="3-aos-kv-del"></a><a href="#3-aos-kv-del" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>3-aos_kv_del</h2>
+<pre><code class="hljs css language-c"><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">aos_kv_del</span><span class="hljs-params">(<span class="hljs-keyword">const</span> <span class="hljs-keyword">char</span> *key)</span>
+</span></code></pre>
+<ul>
+<li><p>[x] <strong>Description</strong></p>
+<p>Delete the KV pair by its key.</p></li>
+<li><p>[x] <strong>Parameters</strong></p>
+<table>
+<thead>
+<tr><th>IN/OUT</th><th>NAME</th><th>DESC</th></tr>
+</thead>
+<tbody>
+<tr><td>[in]</td><td>key</td><td>the key of the KV pair to delete.</td></tr>
+</tbody>
+</table>
+</li>
+<li><p>[x] <strong>Returns</strong></p>
+<p>0 on success, negative error on failure.</p></li>
+</ul>
+</span></div></article></div><div class="docs-prevnext"></div></div></div><nav class="onPageNav docOnPageNav"><ul class="toc-headings"><li><a href="#1-aos-kv-set">1-aos_kv_set</a></li><li><a href="#2-aos-kv-get">2-aos_kv_get</a></li><li><a href="#3-aos-kv-del">3-aos_kv_del</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/docs/Getting-Started" style="margin:20px"><img src="/img/logo.png" alt="AliOS-Things" width="100"/></a><div><h5>Docs</h5><a href="/docs/en/Getting-Started.html">Getting Started</a><a href="/docs/en/Linkkit-Tutorial.html">Guides</a><a href="/docs/en/api-reference/AliOS-Things-API-Guide.html">API Reference</a></div><div><h5>Community</h5><a href="/en/users.html">dingding</a><a href="http://stackoverflow.com/questions/tagged/" target="_blank" rel="noreferrer noopener">WebChart</a><a href="https://discordapp.com/">Project Chat</a><a href="https://twitter.com/" target="_blank" rel="noreferrer noopener">Yunqi</a></div><div><h5>More</h5><a href="/blog">Blog</a><a href="https://github.com/">GitHub</a><a class="github-button" data-icon="octicon-star" data-count-href="/facebook/docusaurus/stargazers" data-show-count="true" data-count-aria-label="# stargazers on GitHub" aria-label="Star this project on GitHub">Star</a></div></section><section class="copyright">Copyright © 2018 AliOS-Things</section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
+              var search = docsearch({
+                
+                apiKey: 'my-api-key',
+                indexName: 'my-index-name',
+                inputSelector: '#search_input_react',
+                algoliaOptions: {}
+              });
+            </script></body></html>

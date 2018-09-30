@@ -1,0 +1,71 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>如何在windows下准备be-cli应用开发环境 · AliOS-Things</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="说明："/><meta name="docsearch:language" content="en"/><meta property="og:title" content="如何在windows下准备be-cli应用开发环境 · AliOS-Things"/><meta property="og:type" content="website"/><meta property="og:url" content="https://your-docusaurus-test-site.com/index.html"/><meta property="og:description" content="说明："/><meta property="og:image" content="https://your-docusaurus-test-site.com/img/docusaurus.png"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://your-docusaurus-test-site.com/img/docusaurus.png"/><link rel="shortcut icon" href="/img/favicon/favicon.ico"/><link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/solarized-dark.min.css"/><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><link rel="stylesheet" href="/css/main.css"/></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/"><h2 class="headerTitle">AliOS-Things</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class=""><a href="/docs/quickstart" target="_self">Docs</a></li><li class=""><a href="/docs/quickstart" target="_self">FAQ</a></li><li class=""><a href="/docs/contributors" target="_self">Contributors</a></li><li class=""><a href="/help" target="_self">Help</a></li><li class=""><a href="https://github.com/alibaba/AliOS-Things" target="_self">GitHub</a></li><li class="navSearchWrapper reactNavSearchWrapper"><input type="text" id="search_input_react" placeholder="Search" title="Search"/></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="container mainContainer docMainContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1 class="postHeaderTitle">如何在windows下准备be-cli应用开发环境</h1></header><article><div><span><p>说明：</p>
+<p>本章节主要介绍windows下验证过的整体开发环境准备，</p>
+<p>be-cli的安装需要node环境+python环境+Visual C++ 编译环境</p>
+<h2><a class="anchor" aria-hidden="true" id="1-编译boneengine-lite固件并烧录"></a><a href="#1-编译boneengine-lite固件并烧录" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>1 编译BoneEngine@Lite固件并烧录</h2>
+<ul>
+<li><p>拥有一块TinyEngine支持的硬件/模组，如mk3060，developerkit，esp32devkitc。</p></li>
+<li><p>下载并烧录了AliOS-Things的tinyengine_app固件。</p></li>
+</ul>
+<h2><a class="anchor" aria-hidden="true" id="2-安装node-npm"></a><a href="#2-安装node-npm" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>2 安装Node/NPM</h2>
+<p>去到下面，下载最新的LTS版本的node即可</p>
+<p><a href="https://nodejs.org/zh-cn/">https://nodejs.org/zh-cn/</a></p>
+<p>在cmd里面执行命令，查看版本：</p>
+<p>C:\Users\Administrator&gt;node -v</p>
+<p>v8.11.1</p>
+<p>C:\Users\Administrator&gt;npm -v</p>
+<p>5.6.0</p>
+<h2><a class="anchor" aria-hidden="true" id="3-安装python"></a><a href="#3-安装python" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>3 安装Python</h2>
+<p>下载安装2.7.x版本python： <a href="http://www.python.org/ftp/python/2.7.3/python-2.7.3.msi">http://www.python.org/ftp/python/2.7.3/python-2.7.3.msi</a></p>
+<p>验证在安装be-cli时候，有依赖native编译的模块serialport编译不成功，最终be-cli下载安装失败。Python version 3.x.x is not supported by node-gyp</p>
+<h2><a class="anchor" aria-hidden="true" id="4-安装visual-c-编译环境"></a><a href="#4-安装visual-c-编译环境" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>4 安装Visual C++ 编译环境</h2>
+<p>在cmd里面执行下面npm命令来安装VC环境解决本地gpy错误：</p>
+<p>npm install --global --production windows-build-tools</p>
+<h2><a class="anchor" aria-hidden="true" id="5-安装usb转串口驱动"></a><a href="#5-安装usb转串口驱动" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>5 安装USB转串口驱动</h2>
+<p>ESP32:</p>
+<p>从silabs官网下载</p>
+<p><a href="https://www.silabs.com/documents/public/software/CP210x_Windows_Drivers.zip">https://www.silabs.com/documents/public/software/CP210x_Windows_Drivers.zip</a></p>
+<p>或者从固件仓库下载</p>
+<p><a href="http://gitlab.alibaba-inc.com/Gravity/gravity_lite/tree/master/rom/esp32/tools">http://gitlab.alibaba-inc.com/Gravity/gravity_lite/tree/master/rom/esp32/tools</a>/<a href="https://www.silabs.com/documents/public/software/CP210x_Windows_Drivers.zip">CP210x_Windows_Drivers.zip</a></p>
+<p>STM32:</p>
+<p><a href="http://gitlab.alibaba-inc.com/Gravity/gravity_lite/tree/master/rom/developerkit/tools/windows">http://gitlab.alibaba-inc.com/Gravity/gravity_lite/tree/master/rom/developerkit/tools/windows</a>/<a href="http://gitlab.alibaba-inc.com/Gravity/gravity_lite/blob/master/rom/developerkit/tools/windows/en.stsw-link004.zip">en.stsw-link004.zip</a></p>
+<p>MK3060:</p>
+<p>mk3060是普通的串口，在windows下插上板子会自动下载安装更新识别。</p>
+<h2><a class="anchor" aria-hidden="true" id="6-安装be-cli工具"></a><a href="#6-安装be-cli工具" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>6 安装be-cli工具</h2>
+<p>npm install be-cli@0.1.32 -g -P</p>
+<p>如果长时间安装不到be-cli，请使用下面的更换代理镜像命令：</p>
+<p>npm install be-cli@0.1.32 -g -P --registry=<a href="https://registry.npm.taobao.org">https://registry.npm.taobao.org</a></p>
+<p>该命令不会更改你本地原始的镜像代理，只是本次下载安装be-cli生效。</p>
+<p>安装完毕，在cmd里面执行 be 可以看到使用说明</p>
+<h2><a class="anchor" aria-hidden="true" id="faq"></a><a href="#faq" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>FAQ:</h2>
+<p>如果在执行npm install be-cli@0.1.32 -g -P --registry=<a href="https://registry.npm.taobao.org">https://registry.npm.taobao.org</a> 出现下面错误，则要去检查python有无安装，或者版本问题，或者环境变量问题</p>
+<pre><code class="hljs">gyp ERR! stack     at failNoPython (D:<span class="hljs-symbol">\P</span>rogram Files<span class="hljs-symbol">\n</span>odejs<span class="hljs-symbol">\n</span>ode_modules<span class="hljs-symbol">\n</span>pm<span class="hljs-symbol">\n</span>od
+e_modules<span class="hljs-symbol">\n</span>ode-gyp<span class="hljs-symbol">\l</span>ib<span class="hljs-symbol">\c</span>onfigure.js:103:14)
+gyp ERR! stack     at D:<span class="hljs-symbol">\P</span>rogram Files<span class="hljs-symbol">\n</span>odejs<span class="hljs-symbol">\n</span>ode_modules<span class="hljs-symbol">\n</span>pm<span class="hljs-symbol">\n</span>ode_modules<span class="hljs-symbol">\n</span>ode
+-gyp<span class="hljs-symbol">\l</span>ib<span class="hljs-symbol">\c</span>onfigure.js:64:11
+gyp ERR! stack     at FSReqWrap.oncomplete (evalmachine.&lt;anonymous&gt;:95:15)
+gyp ERR! System Windows_NT 6.3.9600
+gyp ERR! command "node" "D:<span class="hljs-symbol">\\</span>Program Files<span class="hljs-symbol">\\</span>nodejs<span class="hljs-symbol">\\</span>node_modules<span class="hljs-symbol">\\</span>npm<span class="hljs-symbol">\\</span>node_modu
+les<span class="hljs-symbol">\\</span>node-gyp<span class="hljs-symbol">\\</span>bin<span class="hljs-symbol">\\</span>node-gyp.js" "rebuild"
+gyp ERR! cwd G:<span class="hljs-symbol">\n</span>odejs<span class="hljs-symbol">\m</span>oviesite<span class="hljs-symbol">\n</span>ode_modules<span class="hljs-symbol">\b</span>crypt
+gyp ERR! node -v v0.12.2
+gyp ERR! node-gyp -v v1.0.3
+gyp ERR! not ok
+</code></pre>
+<p>如果在执行npm install be-cli@0.1.32 -g -P --registry=<a href="https://registry.npm.taobao.org">https://registry.npm.taobao.org</a> 出现下面错误，则要去检查VC编译环境是否安装妥当</p>
+<pre><code class="hljs">在此解决方案中一次生成一个项目。若要启用并行生成，请添加“/m”开关。 
+MSBUILD : <span class="hljs-built_in">error</span> <span class="hljs-name">MSB3428</span>: 未能加载   组件“VCBuild.exe”。要解决此问题， 
+<span class="hljs-number">1</span>) 安装 .NET Fram 
+ework <span class="hljs-number">2.0</span> SDK；<span class="hljs-number">2</span>) 安装 Microsoft  Studio <span class="hljs-number">2005</span>；或 <span class="hljs-number">3</span>) 如果将该组件安装到了 
+其他位置，请将其位置添加到系统 
+路径中。 [<span class="hljs-name">G</span>:\node_modules\bcrypt\build\binding.sln] 
+gyp ERR! build <span class="hljs-built_in">error</span>
+</code></pre>
+</span></div></article></div><div class="docs-prevnext"></div></div></div><nav class="onPageNav docOnPageNav"><ul class="toc-headings"><li><a href="#1-编译boneengine-lite固件并烧录">1 编译BoneEngine@Lite固件并烧录</a></li><li><a href="#2-安装node-npm">2 安装Node/NPM</a></li><li><a href="#3-安装python">3 安装Python</a></li><li><a href="#4-安装visual-c-编译环境">4 安装Visual C++ 编译环境</a></li><li><a href="#5-安装usb转串口驱动">5 安装USB转串口驱动</a></li><li><a href="#6-安装be-cli工具">6 安装be-cli工具</a></li><li><a href="#faq">FAQ:</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/docs/Getting-Started" style="margin:20px"><img src="/img/logo.png" alt="AliOS-Things" width="100"/></a><div><h5>Docs</h5><a href="/docs/en/Getting-Started.html">Getting Started</a><a href="/docs/en/Linkkit-Tutorial.html">Guides</a><a href="/docs/en/api-reference/AliOS-Things-API-Guide.html">API Reference</a></div><div><h5>Community</h5><a href="/en/users.html">dingding</a><a href="http://stackoverflow.com/questions/tagged/" target="_blank" rel="noreferrer noopener">WebChart</a><a href="https://discordapp.com/">Project Chat</a><a href="https://twitter.com/" target="_blank" rel="noreferrer noopener">Yunqi</a></div><div><h5>More</h5><a href="/blog">Blog</a><a href="https://github.com/">GitHub</a><a class="github-button" data-icon="octicon-star" data-count-href="/facebook/docusaurus/stargazers" data-show-count="true" data-count-aria-label="# stargazers on GitHub" aria-label="Star this project on GitHub">Star</a></div></section><section class="copyright">Copyright © 2018 AliOS-Things</section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
+              var search = docsearch({
+                
+                apiKey: 'my-api-key',
+                indexName: 'my-index-name',
+                inputSelector: '#search_input_react',
+                algoliaOptions: {}
+              });
+            </script></body></html>

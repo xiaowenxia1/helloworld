@@ -1,0 +1,108 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>uDevice Center · AliOS-Things</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="## IoT弹性在线多设备开发平台"/><meta name="docsearch:language" content="en"/><meta property="og:title" content="uDevice Center · AliOS-Things"/><meta property="og:type" content="website"/><meta property="og:url" content="https://your-docusaurus-test-site.com/index.html"/><meta property="og:description" content="## IoT弹性在线多设备开发平台"/><meta property="og:image" content="https://your-docusaurus-test-site.com/img/docusaurus.png"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://your-docusaurus-test-site.com/img/docusaurus.png"/><link rel="shortcut icon" href="/img/favicon/favicon.ico"/><link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/solarized-dark.min.css"/><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><link rel="stylesheet" href="/css/main.css"/></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/"><h2 class="headerTitle">AliOS-Things</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class=""><a href="/docs/quickstart" target="_self">Docs</a></li><li class=""><a href="/docs/quickstart" target="_self">FAQ</a></li><li class=""><a href="/docs/contributors" target="_self">Contributors</a></li><li class=""><a href="/help" target="_self">Help</a></li><li class=""><a href="https://github.com/alibaba/AliOS-Things" target="_self">GitHub</a></li><li class="navSearchWrapper reactNavSearchWrapper"><input type="text" id="search_input_react" placeholder="Search" title="Search"/></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="container mainContainer docMainContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1 class="postHeaderTitle">uDevice Center</h1></header><article><div><span><h2><a class="anchor" aria-hidden="true" id="iot弹性在线多设备开发平台"></a><a href="#iot弹性在线多设备开发平台" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>IoT弹性在线多设备开发平台</h2>
+<h3><a class="anchor" aria-hidden="true" id="摘要"></a><a href="#摘要" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>摘要</h3>
+<p>IoT开发的一大痛点在于：硬件获取与setup路径太长；开发工具难以支持多设备联合开发。我们用uDevice Center把开发板/设备都搬到了线上，让用户可以不用买硬件接线，在线就能做IoT开发调试了。同时，uDevice Center也支持信息丰富的多设备联合开发。</p>
+<h3><a class="anchor" aria-hidden="true" id="背景"></a><a href="#背景" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>背景</h3>
+<p>IoT的学习与开发是还是比较困难的。对于初学者来说，上手之路就很长：从某宝选购开发板--&gt;等快递--&gt;收到板子--&gt;搞清楚怎么连线--&gt;找个hub把一堆东西接到电脑--&gt;安装开发软件熟悉开发环境。做完这么多事，才能写上第一行代码。选板子接线都是需要一定的硬件专业知识的，这会让很多没有基础的同学直接就放弃了。</p>
+<p><img src="https://img.alicdn.com/tfs/TB1C2ximiqAXuNjy1XdXXaYcVXa-1282-959.png" alt="background.png"></p>
+<p>同时，对于嵌入式老鸟来说，IoT的开发也引入了新的困难：以前做设备开发一台电脑一个板子就搞定了；现在做IoT智能应用开发，需要要多台设备联网通信，就不太容易开发了。比如一套智能家居的房子几十个设备，放地上贴墙上挂天花板上都有，怎么开发呢？现有开发工具大多都不支持多设备同时开发。用一台电脑开发的话，电脑接成八爪鱼都不够，还需要开十几个界面切来切去，开发效率低下。 多用几台电脑开发的话，coding的时间都用来跑来跑去了，不能专注于解决问题。</p>
+<p>IoT开发的痛点在：硬件获取与setup路径太长；开发工具不支持多设备同时开发，也不支持方便可视化的网络应用开发。我们每天都在suffer着这样的问题，遂而开发了uDevice Center - <strong>弹性在线的多设备</strong>开发平台 - 来让IoT开发更简单</p>
+<h3><a class="anchor" aria-hidden="true" id="udevcie-center介绍"></a><a href="#udevcie-center介绍" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>uDevcie Center介绍</h3>
+<p>uDevice Center主要采用如下的方式解决了上述问题：</p>
+<ol>
+<li>将IoT设备搬到线上，做成IoT的ECS：用户不用买板子不用接线，装个软件就能做IoT的开发了；</li>
+<li>提供信息丰富的多设备开发能力：多设备复杂网络开发，made easy！</li>
+</ol>
+<h4><a class="anchor" aria-hidden="true" id="线上的iot开发平台-iot的ecs"></a><a href="#线上的iot开发平台-iot的ecs" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>线上的IoT开发平台 - IoT的ECS</h4>
+<p>uDevice Center把标准的IoT开发板/设备都搬到了线上，让用户可以像使用ECS服务器一样使用IoT开发板。用户只用装好软件，就可以用在线的开发板/设备开始编程调试了，再也不用买板子连线了。开发路径的简化，可以让程序员们把时间精力都集中在业务逻辑的开发调试上，加速IoT学习与开发的历程。弹性在线平台的优点包括：</p>
+<ul>
+<li>无需购买连接硬件，上手快</li>
+<li>无时间地域限制，哪都能做开发</li>
+<li>丰富可选的开发板型号，用哪种都有</li>
+<li>弹性增减的开发板数量，用几个都行</li>
+</ul>
+<p>此外，对于特定应用场景（如智能家具）的开发，弹性在线的平台可以帮助开发者利用公共资源（如全屋智能实验室）很快速地开始应用的开发验证，降低开发门槛，节省成本。</p>
+<p><img src="https://img.alicdn.com/tfs/TB1hdFZoBfH8KJjy1XbXXbLdXXa-5791-3120.png" alt="architecture.png"></p>
+<p>uDevice Center的系统架构如上图所示，主要由：IoT硬件设备、uDevice Center Infrastructure和用户端AliOS Studio软件三部分构成。系统中的IoT硬件设备是由阿里及其合作伙伴提供的模组/开发板/智能设备/实验室等。uDevice Center Infrastructure平台用标准化的方式屏蔽了不同硬件在固件烧录/调试/传感/控制等方面的接口差异，以统一的方式将这些IoT硬件资源虚拟化，再通过网络提供给广大的开发者使用。用户端AliOS Studio软件为用户提供了友好地使用uDevice Center Infrastructure服务的界面。</p>
+<p>此外，uDevice Center是一个开放的平台，可以为想要接入的厂商提供配套软件，帮助厂商将设备（芯片/模组等）快速接入到平台，并推广给开发者使用。</p>
+<h4><a class="anchor" aria-hidden="true" id="多设备联合开发"></a><a href="#多设备联合开发" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>多设备联合开发</h4>
+<p>uDevice Center与AliOS Studio IDE深度结合，为IoT开发者提供信息丰富的多设备联合开发能力。uDevice Center的使用界面如下图所示：中间窗口显示了连接在线的设备，其中每一个圆点就是一个实际的IoT设备；点'07d'c'上的悬浮窗实时显示了这个设备的状态信息；点与点之间的连线展示了mesh网络连接的情况；右边的窗口是设备‘1d1c'的Shell交互界面。
+<img src="https://img.alicdn.com/tfs/TB16t8ZoBfH8KJjy1XbXXbLdXXa-3999-2499.png" alt="image.png">
+uDevice Center为用户提供的多设备联合开发功能包括：</p>
+<ul>
+<li>多设备的代码开发/编译/固件烧录</li>
+<li>多设备shell命令行交互调试与设备控制</li>
+<li>实时显示设备的各种状态信息</li>
+<li>图形化显示设备的（uMesh）连接组网情况</li>
+</ul>
+<p>这种信息丰富的多设备联合开发调试，可以加快物联网智能应用的开发与调试。</p>
+<h3><a class="anchor" aria-hidden="true" id="软件安装步骤"></a><a href="#软件安装步骤" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>软件安装步骤</h3>
+<p>接下来我们将讲解使用uDevice Center进行开发需要安装的软件：</p>
+<ol>
+<li>下载<a href="https://code.visualstudio.com/download">Visual Studio Code</a>并安装</li>
+<li>安装alios-studio插件：启动Visual Studio Code，并参考下图步骤安装
+<img src="https://img.alicdn.com/tfs/TB1KoTCovDH8KJjy1XcXXcpdXXa-3974-2227.png" alt="image.png"></li>
+<li>下载安装AliOS Things代码及编译工具链<a href="https://github.com/alibaba/AliOS-Things/wiki/AliOS-Things-Linux-Environment-Setup">Linux</a>  <a href="https://github.com/alibaba/AliOS-Things/wiki/AliOS-Things-MAC-Environment-Setup">OSX</a>  <a href="https://github.com/alibaba/AliOS-Things/wiki/AliOS-Things-Windows-Environment-Setup">Windows</a> (Optional）</li>
+</ol>
+<h3><a class="anchor" aria-hidden="true" id="udevice-center使用"></a><a href="#udevice-center使用" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>uDevice Center使用</h3>
+<p>uDevice Center的使用方式很灵活：既可以作为多设备开发调试工具单独使用，也可以作为AliOS Thing集成开发环境的组件来使用。</p>
+<p>目前支持的开发板型号：</p>
+<pre><code class="hljs">    乐鑫-esp<span class="hljs-number">32</span>-devkitc
+    庆科-MK<span class="hljs-number">3060</span>
+    STM-Cortex <span class="hljs-name">M0</span>, <span class="hljs-name">M3</span>, <span class="hljs-name">M4</span>, <span class="hljs-name">M7</span>系列
+</code></pre>
+<h4><a class="anchor" aria-hidden="true" id="获取开发板资源"></a><a href="#获取开发板资源" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>获取开发板资源</h4>
+<p>uDevice Center平台上的设备是使用Access Key进行分配的，使用前请先邮件联系AliOS Things团队 (Email: <a href="mailto:aliosthings@service.aliyun.com">aliosthings@service.aliyun.com</a> ) 获取Access Key 。邮件请包含如下信息：</p>
+<ol>
+<li>个人信息：姓名   联系方式   公司名（optional）</li>
+<li>板子资源需求：型号、数量、使用时长等</li>
+<li>简要陈诉用途</li>
+</ol>
+<h4><a class="anchor" aria-hidden="true" id="作为单独开发调试工具使用"></a><a href="#作为单独开发调试工具使用" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>作为单独开发调试工具使用</h4>
+<p>uDevice Center可以作为开发流程中的单独调试工具使用。在这样的流程中，用户可以使用其他工具编辑编译代码，再将产生的固件作为uDevice Center的输入来开发调试设备。单独使用uDevice Center的流程为：
+用其它工具编辑代码编译产生.bin --&gt; 用uDevice Center烧录固件--&gt;用uDevice Center调试</p>
+<p>下面以庆科MK3060开发板为例，介绍单独使用uDevice Center进行开发调试的流程：
+Step 1. 用其他工具编辑代码，并编译产生可以烧录的.bin固件</p>
+<p>Step 2. 启动uDevice Center，并输入你的Access Key
+<img src="https://img.alicdn.com/tfs/TB1rADfoxrI8KJjy0FpXXb5hVXa-3999-2499.png" alt="image.png"></p>
+<p><img src="https://img.alicdn.com/tfs/TB1Y9j_or_I8KJjy1XaXXbsxpXa-3999-2508.png" alt="input-acceeskey.png"></p>
+<p>Step 3. 熟悉uDevice Center
+<img src="https://img.alicdn.com/tfs/TB17k_foxrI8KJjy0FpXXb5hVXa-3999-2497.png" alt="image.png"></p>
+<p>Step 4. 烧录固件
+鼠标右键点击某个空闲MXCHIP3060开发板，选择“Program”将Step 1产生的固件烧录到开发板。Note：请注意核对板子型号，固件烧录到型号不对的板子将无法启动
+<img src="https://img.alicdn.com/tfs/TB1OhvEovDH8KJjy1XcXXcpdXXa-3999-2499.png" alt="image.png"></p>
+<p>Step 5. Shell交互调试
+鼠标右键点击step 4烧录的MXCHIP3060开发板，选择“Shell”与开发板进行命令行交互
+<img src="https://img.alicdn.com/tfs/TB1sATfoxrI8KJjy0FpXXb5hVXa-3999-2499.png" alt="image.png"></p>
+<h4><a class="anchor" aria-hidden="true" id="作为alios-things的集成开发工具组件使用"></a><a href="#作为alios-things的集成开发工具组件使用" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>作为AliOS Things的集成开发工具组件使用</h4>
+<p>作为AliOS Things集成开发工具的一部分使用uDevice Center的典型流程为：
+建立AliOS Things工程 --&gt; 编辑并编译源代码 --&gt; 通过uDevice Center烧录/调试设备</p>
+<p>下面以庆科MK3060开发板为例，介绍使用uDevice Center进行开发调试的流程：</p>
+<p>Step 1. 新建项目，编辑并编译代码
+<img src="https://img.alicdn.com/tfs/TB1d24imiqAXuNjy1XdXXaYcVXa-3999-2499.png" alt="image.png">
+<img src="https://img.alicdn.com/tfs/TB18Qn7or_I8KJjy1XaXXbsxpXa-3999-2499.png" alt="image.png">
+<img src="https://img.alicdn.com/tfs/TB1QwdimiqAXuNjy1XdXXaYcVXa-3999-2499.png" alt="image.png"></p>
+<p>Step 2. 启动uDevice Center: 操作步骤同上</p>
+<p>Step 3. 烧录固件
+鼠标右键点击某个空闲MXCHIP3060开发板，选择“Program Last Build”将刚才编译固件烧录到开发板。Note：请注意核对板子型号，固件烧录到型号不对的板子将无法启动
+<img src="https://img.alicdn.com/tfs/TB13pbEovDH8KJjy1XcXXcpdXXa-3999-2499.png" alt="image.png"></p>
+<p>Step 4. Shell交互调试: 操作步骤同上</p>
+<h3><a class="anchor" aria-hidden="true" id="待完善功能点"></a><a href="#待完善功能点" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>待完善功能点</h3>
+<ol>
+<li>支持GDB代码级调试</li>
+<li>支持更丰富的设备状态显示</li>
+<li>丰富硬件的控制功能</li>
+</ol>
+<h3><a class="anchor" aria-hidden="true" id="总结"></a><a href="#总结" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>总结</h3>
+<p>uDevice Center是在线的IoT多设备开发调试平台，能方便开发者快速高效地进行IoT云端一体应用的开发、调试和测试等。通过硬件在线与虚拟化，既能让更多的开发新手快速上手学习IoT开发，又能帮助资深开发者快速高效地开发调试IoT应用。</p>
+<h3><a class="anchor" aria-hidden="true" id="钉钉群"></a><a href="#钉钉群" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>钉钉群</h3>
+<p>使用交流uDevice Center可加入以下钉钉群
+<img src="https://img.alicdn.com/tfs/TB1VuzJovDH8KJjy1XcXXcpdXXa-750-990.jpg" alt="image.png"></p>
+</span></div></article></div><div class="docs-prevnext"></div></div></div><nav class="onPageNav docOnPageNav"><ul class="toc-headings"><li><a href="#iot弹性在线多设备开发平台">IoT弹性在线多设备开发平台</a><ul class="toc-headings"><li><a href="#摘要">摘要</a></li><li><a href="#背景">背景</a></li><li><a href="#udevcie-center介绍">uDevcie Center介绍</a></li><li><a href="#软件安装步骤">软件安装步骤</a></li><li><a href="#udevice-center使用">uDevice Center使用</a></li><li><a href="#待完善功能点">待完善功能点</a></li><li><a href="#总结">总结</a></li><li><a href="#钉钉群">钉钉群</a></li></ul></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/docs/Getting-Started" style="margin:20px"><img src="/img/logo.png" alt="AliOS-Things" width="100"/></a><div><h5>Docs</h5><a href="/docs/en/Getting-Started.html">Getting Started</a><a href="/docs/en/Linkkit-Tutorial.html">Guides</a><a href="/docs/en/api-reference/AliOS-Things-API-Guide.html">API Reference</a></div><div><h5>Community</h5><a href="/en/users.html">dingding</a><a href="http://stackoverflow.com/questions/tagged/" target="_blank" rel="noreferrer noopener">WebChart</a><a href="https://discordapp.com/">Project Chat</a><a href="https://twitter.com/" target="_blank" rel="noreferrer noopener">Yunqi</a></div><div><h5>More</h5><a href="/blog">Blog</a><a href="https://github.com/">GitHub</a><a class="github-button" data-icon="octicon-star" data-count-href="/facebook/docusaurus/stargazers" data-show-count="true" data-count-aria-label="# stargazers on GitHub" aria-label="Star this project on GitHub">Star</a></div></section><section class="copyright">Copyright © 2018 AliOS-Things</section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
+              var search = docsearch({
+                
+                apiKey: 'my-api-key',
+                indexName: 'my-index-name',
+                inputSelector: '#search_input_react',
+                algoliaOptions: {}
+              });
+            </script></body></html>

@@ -1,0 +1,319 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>api-reference/AliOS-Things-API-YLOOP-Guide · AliOS-Things</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="# API INDEX"/><meta name="docsearch:language" content="en"/><meta property="og:title" content="api-reference/AliOS-Things-API-YLOOP-Guide · AliOS-Things"/><meta property="og:type" content="website"/><meta property="og:url" content="https://your-docusaurus-test-site.com/index.html"/><meta property="og:description" content="# API INDEX"/><meta property="og:image" content="https://your-docusaurus-test-site.com/img/docusaurus.png"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://your-docusaurus-test-site.com/img/docusaurus.png"/><link rel="shortcut icon" href="/img/favicon/favicon.ico"/><link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/solarized-dark.min.css"/><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><link rel="stylesheet" href="/css/main.css"/></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/"><h2 class="headerTitle">AliOS-Things</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class=""><a href="/docs/quickstart" target="_self">Docs</a></li><li class=""><a href="/docs/quickstart" target="_self">FAQ</a></li><li class=""><a href="/docs/contributors" target="_self">Contributors</a></li><li class=""><a href="/help" target="_self">Help</a></li><li class=""><a href="https://github.com/alibaba/AliOS-Things" target="_self">GitHub</a></li><li class="navSearchWrapper reactNavSearchWrapper"><input type="text" id="search_input_react" placeholder="Search" title="Search"/></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="container mainContainer docMainContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1 class="postHeaderTitle">api-reference/AliOS-Things-API-YLOOP-Guide</h1></header><article><div><span><h1><a class="anchor" aria-hidden="true" id="api-index"></a><a href="#api-index" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>API INDEX</h1>
+<ul>
+<li><a href="#1-aos_register_event_filter">1 aos_register_event_filter</a></li>
+<li><a href="#2-aos_unregister_event_filter">2 aos_unregister_event_filter</a></li>
+<li><a href="#3-aos_post_event">3 aos_post_event</a></li>
+<li><a href="#4-aos_poll_read_fd">4 aos_poll_read_fd</a></li>
+<li><a href="#5-aos_cancel_poll_read_fd">5 aos_cancel_poll_read_fd</a></li>
+<li><a href="#6-aos_post_delayed_action">6 aos_post_delayed_action</a></li>
+<li><a href="#7-aos_cancel_delayed_action">7 aos_cancel_delayed_action</a></li>
+<li><a href="#8-aos_schedule_call">8 aos_schedule_call</a></li>
+<li><a href="#9-aos_loop_init">9 aos_loop_init</a></li>
+<li><a href="#10-aos_current_loop">10 aos_current_loop</a></li>
+<li><a href="#11-aos_loop_run">11 aos_loop_run</a></li>
+<li><a href="#12-aos_loop_exit">12 aos_loop_exit</a></li>
+<li><a href="#13-aos_loop_destroy">13 aos_loop_destroy</a></li>
+<li><a href="#14-aos_loop_schedule_call">14 aos_loop_schedule_call</a></li>
+<li><a href="#15-aos_loop_schedule_work">15 aos_loop_schedule_work</a></li>
+<li><a href="#16-aos_cancel_work">16 aos_cancel_work</a></li>
+</ul>
+<hr>
+<h2><a class="anchor" aria-hidden="true" id="1-aos-register-event-filter"></a><a href="#1-aos-register-event-filter" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>1-aos_register_event_filter</h2>
+<pre><code class="hljs css language-c"><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">aos_register_event_filter</span><span class="hljs-params">(<span class="hljs-keyword">uint16_t</span> type, aos_event_cb cb, <span class="hljs-keyword">void</span> *priv)</span>
+</span></code></pre>
+<ul>
+<li><p>[x] <strong>Description</strong></p>
+<p>Register system event filter callback.</p></li>
+<li><p>[x] <strong>Parameters</strong></p>
+<table>
+<thead>
+<tr><th>IN/OUT</th><th>NAME</th><th>DESC</th></tr>
+</thead>
+<tbody>
+<tr><td>[in]</td><td>type</td><td>event type interested.</td></tr>
+<tr><td>[in]</td><td>cb</td><td>system event callback.</td></tr>
+<tr><td>[in]</td><td>priv</td><td>private data past to cb.</td></tr>
+</tbody>
+</table>
+</li>
+<li><p>[x] <strong>Returns</strong></p>
+<p>the operation status, 0 is OK, others is error.</p></li>
+</ul>
+<h2><a class="anchor" aria-hidden="true" id="2-aos-unregister-event-filter"></a><a href="#2-aos-unregister-event-filter" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>2-aos_unregister_event_filter</h2>
+<pre><code class="hljs css language-c"><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">aos_unregister_event_filter</span><span class="hljs-params">(<span class="hljs-keyword">uint16_t</span> type, aos_event_cb cb, <span class="hljs-keyword">void</span> *priv)</span>
+</span></code></pre>
+<ul>
+<li><p>[x] <strong>Description</strong></p>
+<p>Unregister native event callback.</p></li>
+<li><p>[x] <strong>Parameters</strong></p>
+<table>
+<thead>
+<tr><th>IN/OUT</th><th>NAME</th><th>DESC</th></tr>
+</thead>
+<tbody>
+<tr><td>[in]</td><td>type</td><td>event type interested.</td></tr>
+<tr><td>[in]</td><td>cb</td><td>system event callback.</td></tr>
+<tr><td>[in]</td><td>priv</td><td>private data past to cb.</td></tr>
+</tbody>
+</table>
+</li>
+<li><p>[x] <strong>Returns</strong></p>
+<p>the operation status, 0 is OK, others is error.</p></li>
+</ul>
+<h2><a class="anchor" aria-hidden="true" id="3-aos-post-event"></a><a href="#3-aos-post-event" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>3-aos_post_event</h2>
+<pre><code class="hljs css language-c"><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">aos_post_event</span><span class="hljs-params">(<span class="hljs-keyword">uint16_t</span> type, <span class="hljs-keyword">uint16_t</span> code, <span class="hljs-keyword">unsigned</span> <span class="hljs-keyword">long</span>  value)</span>
+</span></code></pre>
+<ul>
+<li><p>[x] <strong>Description</strong></p>
+<p>Post local event.</p></li>
+<li><p>[x] <strong>Parameters</strong></p>
+<table>
+<thead>
+<tr><th>IN/OUT</th><th>NAME</th><th>DESC</th></tr>
+</thead>
+<tbody>
+<tr><td>[in]</td><td>type</td><td>event type.</td></tr>
+<tr><td>[in]</td><td>code</td><td>event code.</td></tr>
+<tr><td>[in]</td><td>value</td><td>event value.</td></tr>
+</tbody>
+</table>
+</li>
+<li><p>[x] <strong>Returns</strong></p>
+<p>the operation status, 0 is OK,others is error.</p></li>
+</ul>
+<h2><a class="anchor" aria-hidden="true" id="4-aos-poll-read-fd"></a><a href="#4-aos-poll-read-fd" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>4-aos_poll_read_fd</h2>
+<pre><code class="hljs css language-c"><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">aos_poll_read_fd</span><span class="hljs-params">(<span class="hljs-keyword">int</span> fd, <span class="hljs-keyword">aos_poll_call_t</span> action, <span class="hljs-keyword">void</span> *param)</span>
+</span></code></pre>
+<ul>
+<li><p>[x] <strong>Description</strong></p>
+<p>Register a poll event in main loop.</p></li>
+<li><p>[x] <strong>Parameters</strong></p>
+<table>
+<thead>
+<tr><th>IN/OUT</th><th>NAME</th><th>DESC</th></tr>
+</thead>
+<tbody>
+<tr><td>[in]</td><td>fd</td><td>poll fd.</td></tr>
+<tr><td>[in]</td><td>action</td><td>action to be executed.</td></tr>
+<tr><td>[in]</td><td>param</td><td>private data past to action.</td></tr>
+</tbody>
+</table>
+</li>
+<li><p>[x] <strong>Returns</strong></p>
+<p>the operation status, 0 is OK,others is error.</p></li>
+</ul>
+<h2><a class="anchor" aria-hidden="true" id="5-aos-cancel-poll-read-fd"></a><a href="#5-aos-cancel-poll-read-fd" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>5-aos_cancel_poll_read_fd</h2>
+<pre><code class="hljs css language-c"><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">aos_cancel_poll_read_fd</span><span class="hljs-params">(<span class="hljs-keyword">int</span> fd, <span class="hljs-keyword">aos_poll_call_t</span> action, <span class="hljs-keyword">void</span> *param)</span>
+</span></code></pre>
+<ul>
+<li><p>[x] <strong>Description</strong></p>
+<p>Cancel a poll event to be executed in main loop.</p></li>
+<li><p>[x] <strong>Parameters</strong></p>
+<table>
+<thead>
+<tr><th>IN/OUT</th><th>NAME</th><th>DESC</th></tr>
+</thead>
+<tbody>
+<tr><td>[in]</td><td>fd</td><td>poll fd.</td></tr>
+<tr><td>[in]</td><td>action</td><td>action to be executed.</td></tr>
+<tr><td>[in]</td><td>param</td><td>private data past to action.</td></tr>
+</tbody>
+</table>
+</li>
+<li><p>[x] <strong>Returns</strong></p>
+<p>None.</p></li>
+</ul>
+<h2><a class="anchor" aria-hidden="true" id="6-aos-post-delayed-action"></a><a href="#6-aos-post-delayed-action" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>6-aos_post_delayed_action</h2>
+<pre><code class="hljs css language-c"><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">aos_post_delayed_action</span><span class="hljs-params">(<span class="hljs-keyword">int</span> ms, <span class="hljs-keyword">aos_call_t</span> action, <span class="hljs-keyword">void</span> *arg)</span>
+</span></code></pre>
+<ul>
+<li><p>[x] <strong>Description</strong></p>
+<p>Post a delayed action to be executed in main loop.</p></li>
+<li><p>[x] <strong>Parameters</strong></p>
+<table>
+<thead>
+<tr><th>IN/OUT</th><th>NAME</th><th>DESC</th></tr>
+</thead>
+<tbody>
+<tr><td>[in]</td><td>ms</td><td>milliseconds to wait.</td></tr>
+<tr><td>[in]</td><td>action</td><td>action to be executed.</td></tr>
+<tr><td>[in]</td><td>arg</td><td>private data past to action.</td></tr>
+</tbody>
+</table>
+</li>
+<li><p>[x] <strong>Returns</strong></p>
+<p>the operation status, 0 is OK,others is error.</p></li>
+</ul>
+<h2><a class="anchor" aria-hidden="true" id="7-aos-cancel-delayed-action"></a><a href="#7-aos-cancel-delayed-action" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>7-aos_cancel_delayed_action</h2>
+<pre><code class="hljs css language-c"><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">aos_cancel_delayed_action</span><span class="hljs-params">(<span class="hljs-keyword">int</span> ms, <span class="hljs-keyword">aos_call_t</span> action, <span class="hljs-keyword">void</span> *arg)</span>
+</span></code></pre>
+<ul>
+<li><p>[x] <strong>Description</strong></p>
+<p>Cancel a delayed action to be executed in main loop.</p></li>
+<li><p>[x] <strong>Parameters</strong></p>
+<table>
+<thead>
+<tr><th>IN/OUT</th><th>NAME</th><th>DESC</th></tr>
+</thead>
+<tbody>
+<tr><td>[in]</td><td>ms</td><td>milliseconds to wait, -1 means don't care.</td></tr>
+<tr><td>[in]</td><td>action</td><td>action to be executed.</td></tr>
+<tr><td>[in]</td><td>arg</td><td>private data past to action.</td></tr>
+</tbody>
+</table>
+</li>
+<li><p>[x] <strong>Returns</strong></p>
+<p>None.</p></li>
+</ul>
+<h2><a class="anchor" aria-hidden="true" id="8-aos-schedule-call"></a><a href="#8-aos-schedule-call" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>8-aos_schedule_call</h2>
+<pre><code class="hljs css language-c"><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">aos_schedule_call</span><span class="hljs-params">(<span class="hljs-keyword">aos_call_t</span> action, <span class="hljs-keyword">void</span> *arg)</span>
+</span></code></pre>
+<ul>
+<li><p>[x] <strong>Description</strong></p>
+<p>Schedule a callback in next event loop.
+Unlike aos_post_delayed_action,
+this function can be called from non-aos-main-loop context.</p></li>
+<li><p>[x] <strong>Parameters</strong></p>
+<table>
+<thead>
+<tr><th>IN/OUT</th><th>NAME</th><th>DESC</th></tr>
+</thead>
+<tbody>
+<tr><td>[in]</td><td>action</td><td>action to be executed.</td></tr>
+<tr><td>[in]</td><td>arg</td><td>private data past to action.</td></tr>
+</tbody>
+</table>
+</li>
+<li><p>[x] <strong>Returns</strong></p>
+<p>the operation status, &lt;0 is error,others is OK.</p></li>
+</ul>
+<h2><a class="anchor" aria-hidden="true" id="9-aos-loop-init"></a><a href="#9-aos-loop-init" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>9-aos_loop_init</h2>
+<pre><code class="hljs css language-c"><span class="hljs-keyword">aos_loop_t</span> aos_loop_init(<span class="hljs-keyword">void</span>)
+</code></pre>
+<ul>
+<li><p>[x] <strong>Description</strong></p>
+<p>Init a per-task event loop.</p></li>
+<li><p>[x] <strong>Parameters</strong></p>
+<p>None.</p></li>
+<li><p>[x] <strong>Returns</strong></p>
+<p>the handler of aos_loop_t,NULL failure,others success.</p></li>
+</ul>
+<h2><a class="anchor" aria-hidden="true" id="10-aos-current-loop"></a><a href="#10-aos-current-loop" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>10-aos_current_loop</h2>
+<pre><code class="hljs css language-c"><span class="hljs-keyword">aos_loop_t</span> aos_current_loop(<span class="hljs-keyword">void</span>)
+</code></pre>
+<ul>
+<li><p>[x] <strong>Description</strong></p>
+<p>Get current event loop.</p></li>
+<li><p>[x] <strong>Parameters</strong></p>
+<p>None.</p></li>
+<li><p>[x] <strong>Returns</strong></p>
+<p>default event loop.</p></li>
+</ul>
+<h2><a class="anchor" aria-hidden="true" id="11-aos-loop-run"></a><a href="#11-aos-loop-run" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>11-aos_loop_run</h2>
+<pre><code class="hljs css language-c"><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">aos_loop_run</span><span class="hljs-params">(<span class="hljs-keyword">void</span>)</span>
+</span></code></pre>
+<ul>
+<li><p>[x] <strong>Description</strong></p>
+<p>Start event loop.</p></li>
+<li><p>[x] <strong>Parameters</strong></p>
+<p>None.</p></li>
+<li><p>[x] <strong>Returns</strong></p>
+<p>None.</p></li>
+</ul>
+<h2><a class="anchor" aria-hidden="true" id="12-aos-loop-exit"></a><a href="#12-aos-loop-exit" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>12-aos_loop_exit</h2>
+<pre><code class="hljs css language-c"><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">aos_loop_exit</span><span class="hljs-params">(<span class="hljs-keyword">void</span>)</span>
+</span></code></pre>
+<ul>
+<li><p>[x] <strong>Description</strong></p>
+<p>Exit event loop, aos_loop_run() will return.</p></li>
+<li><p>[x] <strong>Parameters</strong></p>
+<p>None.</p></li>
+<li><p>[x] <strong>Returns</strong></p>
+<p>None.</p></li>
+</ul>
+<h2><a class="anchor" aria-hidden="true" id="13-aos-loop-destroy"></a><a href="#13-aos-loop-destroy" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>13-aos_loop_destroy</h2>
+<pre><code class="hljs css language-c"><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">aos_loop_destroy</span><span class="hljs-params">(<span class="hljs-keyword">void</span>)</span>
+</span></code></pre>
+<ul>
+<li><p>[x] <strong>Description</strong></p>
+<p>Free event loop resources.</p></li>
+<li><p>[x] <strong>Parameters</strong></p>
+<p>None.</p></li>
+<li><p>[x] <strong>Returns</strong></p>
+<p>None.</p></li>
+</ul>
+<h2><a class="anchor" aria-hidden="true" id="14-aos-loop-schedule-call"></a><a href="#14-aos-loop-schedule-call" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>14-aos_loop_schedule_call</h2>
+<pre><code class="hljs css language-c"><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">aos_loop_schedule_call</span><span class="hljs-params">(<span class="hljs-keyword">aos_loop_t</span> *loop, <span class="hljs-keyword">aos_call_t</span> action, <span class="hljs-keyword">void</span> *arg)</span>
+</span></code></pre>
+<ul>
+<li><p>[x] <strong>Description</strong></p>
+<p>Schedule a callback specified event loop.</p></li>
+<li><p>[x] <strong>Parameters</strong></p>
+<table>
+<thead>
+<tr><th>IN/OUT</th><th>NAME</th><th>DESC</th></tr>
+</thead>
+<tbody>
+<tr><td>[in]</td><td>loop</td><td>event loop to be scheduled, NULL for default main loop.</td></tr>
+<tr><td>[in]</td><td>action</td><td>action to be executed.</td></tr>
+<tr><td>[in]</td><td>arg</td><td>private data past to action.</td></tr>
+</tbody>
+</table>
+</li>
+<li><p>[x] <strong>Returns</strong></p>
+<p>the operation status, &lt;0 is error,others is OK.</p></li>
+</ul>
+<h2><a class="anchor" aria-hidden="true" id="15-aos-loop-schedule-work"></a><a href="#15-aos-loop-schedule-work" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>15-aos_loop_schedule_work</h2>
+<pre><code class="hljs css language-c"><span class="hljs-function"><span class="hljs-keyword">void</span> *<span class="hljs-title">aos_loop_schedule_work</span><span class="hljs-params">(<span class="hljs-keyword">int</span> ms, <span class="hljs-keyword">aos_call_t</span> action, <span class="hljs-keyword">void</span> *arg1,
+                             <span class="hljs-keyword">aos_call_t</span> fini_cb, <span class="hljs-keyword">void</span> *arg2)</span>
+</span></code></pre>
+<ul>
+<li><p>[x] <strong>Description</strong></p>
+<p>Schedule a work to be executed in workqueue.</p></li>
+<li><p>[x] <strong>Parameters</strong></p>
+<table>
+<thead>
+<tr><th>IN/OUT</th><th>NAME</th><th>DESC</th></tr>
+</thead>
+<tbody>
+<tr><td>[in]</td><td>ms</td><td>milliseconds to delay before execution, 0 means immediately.</td></tr>
+<tr><td>[in]</td><td>action</td><td>action to be executed.</td></tr>
+<tr><td>[in]</td><td>arg1</td><td>private data past to action.</td></tr>
+<tr><td>[in]</td><td>fini_cb</td><td>finish callback to be executed after action is done in current event loop.</td></tr>
+<tr><td>[in]</td><td>arg2</td><td>data past to fini_cb.</td></tr>
+</tbody>
+</table>
+</li>
+<li><p>[x] <strong>Returns</strong></p>
+<p>work handle,NULL failure,others is OK.</p></li>
+</ul>
+<h2><a class="anchor" aria-hidden="true" id="16-aos-cancel-work"></a><a href="#16-aos-cancel-work" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>16-aos_cancel_work</h2>
+<pre><code class="hljs css language-c"><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">aos_cancel_work</span><span class="hljs-params">(<span class="hljs-keyword">void</span> *work, <span class="hljs-keyword">aos_call_t</span> action, <span class="hljs-keyword">void</span> *arg1)</span>
+</span></code></pre>
+<ul>
+<li><p>[x] <strong>Description</strong></p>
+<p>Cancel a work.</p></li>
+<li><p>[x] <strong>Parameters</strong></p>
+<table>
+<thead>
+<tr><th>IN/OUT</th><th>NAME</th><th>DESC</th></tr>
+</thead>
+<tbody>
+<tr><td>[in]</td><td>work</td><td>work to be cancelled.</td></tr>
+<tr><td>[in]</td><td>action</td><td>action to be executed.</td></tr>
+<tr><td>[in]</td><td>arg1</td><td>private data past to action.</td></tr>
+</tbody>
+</table>
+</li>
+<li><p>[x] <strong>Returns</strong></p>
+<p>None.</p></li>
+</ul>
+</span></div></article></div><div class="docs-prevnext"></div></div></div><nav class="onPageNav docOnPageNav"><ul class="toc-headings"><li><a href="#1-aos-register-event-filter">1-aos_register_event_filter</a></li><li><a href="#2-aos-unregister-event-filter">2-aos_unregister_event_filter</a></li><li><a href="#3-aos-post-event">3-aos_post_event</a></li><li><a href="#4-aos-poll-read-fd">4-aos_poll_read_fd</a></li><li><a href="#5-aos-cancel-poll-read-fd">5-aos_cancel_poll_read_fd</a></li><li><a href="#6-aos-post-delayed-action">6-aos_post_delayed_action</a></li><li><a href="#7-aos-cancel-delayed-action">7-aos_cancel_delayed_action</a></li><li><a href="#8-aos-schedule-call">8-aos_schedule_call</a></li><li><a href="#9-aos-loop-init">9-aos_loop_init</a></li><li><a href="#10-aos-current-loop">10-aos_current_loop</a></li><li><a href="#11-aos-loop-run">11-aos_loop_run</a></li><li><a href="#12-aos-loop-exit">12-aos_loop_exit</a></li><li><a href="#13-aos-loop-destroy">13-aos_loop_destroy</a></li><li><a href="#14-aos-loop-schedule-call">14-aos_loop_schedule_call</a></li><li><a href="#15-aos-loop-schedule-work">15-aos_loop_schedule_work</a></li><li><a href="#16-aos-cancel-work">16-aos_cancel_work</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/docs/Getting-Started" style="margin:20px"><img src="/img/logo.png" alt="AliOS-Things" width="100"/></a><div><h5>Docs</h5><a href="/docs/en/Getting-Started.html">Getting Started</a><a href="/docs/en/Linkkit-Tutorial.html">Guides</a><a href="/docs/en/api-reference/AliOS-Things-API-Guide.html">API Reference</a></div><div><h5>Community</h5><a href="/en/users.html">dingding</a><a href="http://stackoverflow.com/questions/tagged/" target="_blank" rel="noreferrer noopener">WebChart</a><a href="https://discordapp.com/">Project Chat</a><a href="https://twitter.com/" target="_blank" rel="noreferrer noopener">Yunqi</a></div><div><h5>More</h5><a href="/blog">Blog</a><a href="https://github.com/">GitHub</a><a class="github-button" data-icon="octicon-star" data-count-href="/facebook/docusaurus/stargazers" data-show-count="true" data-count-aria-label="# stargazers on GitHub" aria-label="Star this project on GitHub">Star</a></div></section><section class="copyright">Copyright © 2018 AliOS-Things</section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
+              var search = docsearch({
+                
+                apiKey: 'my-api-key',
+                indexName: 'my-index-name',
+                inputSelector: '#search_input_react',
+                algoliaOptions: {}
+              });
+            </script></body></html>
